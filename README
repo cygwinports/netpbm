@@ -11,54 +11,56 @@ a mirror image; Creating a sequence of images that fade from one image
 to another; etc.
 
 Runtime requirements:
-  cygwin-1.5.21-2
-  file-4.15-2
+  cygwin-1.5.24-2
+  file-4.19-1
   ghostscript-8.50-1
-  jbigkit-1.5-3
-  libX11_6-1.0.3-1
-  libjpeg62-6b-11
-  libpng12-1.2.8-2
-  libtiff5-3.7.3-1
-  libxml2-2.6.26-1
-  zlib-1.2.3-1
+  libX11_6-1.1.1-1
+  libjbig2-1.6-1
+  libjpeg62-6b-12
+  libpng12-1.2.12-1
+  libtiff5-3.8.2-3
+  libxml2-2.6.27-1
+  zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.21-2
+  cygwin-1.5.24-2
   binutils-20060817-1
-  cygport-0.2.6-1
-  gcc-core-3.4.4-1
+  cygport-0.2.9-1
+  gcc-core-3.4.4-3
   make-3.81-1
   perl-5.8.7-5
-  sed-4.1.5-1
+  sed-4.1.5-2
 
 Canonical homepage:
   http://netpbm.sourceforge.net/
 
 Canonical download:
-  http://prdownloads.sourceforge.net/netpbm/
+  https://netpbm.svn.sourceforge.net/svnroot/netpbm/
 
 -------------------------------------------
 
 Build instructions:
-  unpack netpbm-10.33-1-src.tar.bz2
+  unpack netpbm-10.37.02-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./netpbm-10.33-1.cygport all
+  cygport ./netpbm-10.37.02-1.cygport all
 
 This will create:
-  /usr/src/libnetpbm-devel-10.33-1.tar.bz2
-  /usr/src/libnetpbm10-10.33-1.tar.bz2
-  /usr/src/netpbm-10.33-1-src.tar.bz2
-  /usr/src/netpbm-10.33-1.tar.bz2
-  /usr/src/netpbm-doc-10.33-1.tar.bz2
+  /usr/src/libnetpbm-devel-10.37.02-1.tar.bz2
+  /usr/src/libnetpbm10-10.37.02-1.tar.bz2
+  /usr/src/netpbm-10.37.02-1-src.tar.bz2
+  /usr/src/netpbm-10.37.02-1.tar.bz2
+  /usr/src/netpbm-doc-10.37.02-1.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
 (netpbm)
+  /etc/defaults/etc/manweb.conf
+  /etc/postinstall/netpbm.sh
   /usr/bin/411toppm.exe
   /usr/bin/anytopnm
   /usr/bin/asciitopgm.exe
@@ -100,6 +102,7 @@ Files included in the binary packages:
   /usr/bin/palmtopnm.exe
   /usr/bin/pamaddnoise.exe
   /usr/bin/pamarith.exe
+  /usr/bin/pambackground.exe
   /usr/bin/pambayer.exe
   /usr/bin/pamchannel.exe
   /usr/bin/pamcomp.exe
@@ -140,6 +143,7 @@ Files included in the binary packages:
   /usr/bin/pamtilt.exe
   /usr/bin/pamtodjvurle.exe
   /usr/bin/pamtofits.exe
+  /usr/bin/pamtogif.exe
   /usr/bin/pamtohdiff.exe
   /usr/bin/pamtohtmltbl.exe
   /usr/bin/pamtopfm.exe
@@ -191,7 +195,7 @@ Files included in the binary packages:
   /usr/bin/pbmtopsg3.exe
   /usr/bin/pbmtoptx.exe
   /usr/bin/pbmtowbmp.exe
-  /usr/bin/pbmtox10bm.exe
+  /usr/bin/pbmtox10bm
   /usr/bin/pbmtoxbm.exe
   /usr/bin/pbmtoybm.exe
   /usr/bin/pbmtozinc.exe
@@ -378,8 +382,8 @@ Files included in the binary packages:
   /usr/bin/yuvsplittoppm.exe
   /usr/bin/yuvtoppm.exe
   /usr/bin/zeisstopnm.exe
-  /usr/share/doc/Cygwin/netpbm-10.36.5.README
-  /usr/share/doc/netpbm-10.36.5/README
+  /usr/share/doc/Cygwin/netpbm-10.37.02.README
+  /usr/share/doc/netpbm-10.37.02/README
   /usr/share/netpbm/palmcolor8.map
   /usr/share/netpbm/palmgray1.map
   /usr/share/netpbm/palmgray2.map
@@ -456,6 +460,7 @@ Files included in the binary packages:
   /usr/share/man/man1/palmtopnm.1.gz
   /usr/share/man/man1/pamaddnoise.1.gz
   /usr/share/man/man1/pamarith.1.gz
+  /usr/share/man/man1/pambackground.1.gz
   /usr/share/man/man1/pambayer.1.gz
   /usr/share/man/man1/pamchannel.1.gz
   /usr/share/man/man1/pamcomp.1.gz
@@ -496,6 +501,7 @@ Files included in the binary packages:
   /usr/share/man/man1/pamtilt.1.gz
   /usr/share/man/man1/pamtodjvurle.1.gz
   /usr/share/man/man1/pamtofits.1.gz
+  /usr/share/man/man1/pamtogif.1.gz
   /usr/share/man/man1/pamtohdiff.1.gz
   /usr/share/man/man1/pamtohtmltbl.1.gz
   /usr/share/man/man1/pamtopfm.1.gz
@@ -748,6 +754,7 @@ Files included in the binary packages:
   /usr/share/netpbm/manweb/eyuvtoppm.html
   /usr/share/netpbm/manweb/fiascotopnm.html
   /usr/share/netpbm/manweb/fitstopnm.html
+  /usr/share/netpbm/manweb/flatebug.png
   /usr/share/netpbm/manweb/fstopgm.html
   /usr/share/netpbm/manweb/g3topbm.html
   /usr/share/netpbm/manweb/gemtopbm.html
@@ -795,6 +802,7 @@ Files included in the binary packages:
   /usr/share/netpbm/manweb/pam.html
   /usr/share/netpbm/manweb/pamaddnoise.html
   /usr/share/netpbm/manweb/pamarith.html
+  /usr/share/netpbm/manweb/pambackground.html
   /usr/share/netpbm/manweb/pambayer.html
   /usr/share/netpbm/manweb/pamchannel.html
   /usr/share/netpbm/manweb/pamcomp.html
@@ -835,6 +843,7 @@ Files included in the binary packages:
   /usr/share/netpbm/manweb/pamtilt.html
   /usr/share/netpbm/manweb/pamtodjvurle.html
   /usr/share/netpbm/manweb/pamtofits.html
+  /usr/share/netpbm/manweb/pamtogif.html
   /usr/share/netpbm/manweb/pamtohdiff.html
   /usr/share/netpbm/manweb/pamtohtmltbl.html
   /usr/share/netpbm/manweb/pamtojpeg2k.html
@@ -1086,6 +1095,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 10.37.02-1 -----
+Version bump.
 
 ----- version 10.36.5-1 -----
 Version bump.
