@@ -12,21 +12,21 @@ to another; etc.
 
 Runtime requirements:
   cygwin-1.5.24-2
-  file-4.19-1
+  file
   ghostscript-8.50-1
   libX11_6-1.1.1-1
   libjbig2-1.6-1
   libjpeg62-6b-12
   libpng12-1.2.12-1
   libtiff5-3.8.2-3
-  libxml2-2.6.27-1
+  libxml2-2.6.28-2
   zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
   cygwin-1.5.24-2
   binutils-20060817-1
-  cygport-0.2.9-1
+  cygport-0.3.1-1
   gcc-core-3.4.4-3
   make-3.81-1
   perl-5.8.7-5
@@ -41,26 +41,24 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack netpbm-10.37.02-1-src.tar.bz2
+  unpack netpbm-10.39.00-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./netpbm-10.37.02-1.cygport all
+  cygport ./netpbm-10.39.00-1.cygport all
 
 This will create:
-  /usr/src/libnetpbm-devel-10.37.02-1.tar.bz2
-  /usr/src/libnetpbm10-10.37.02-1.tar.bz2
-  /usr/src/netpbm-10.37.02-1-src.tar.bz2
-  /usr/src/netpbm-10.37.02-1.tar.bz2
-  /usr/src/netpbm-doc-10.37.02-1.tar.bz2
+  /usr/src/libnetpbm-devel-10.39.00-1.tar.bz2
+  /usr/src/libnetpbm10-10.39.00-1.tar.bz2
+  /usr/src/netpbm-10.39.00-1-src.tar.bz2
+  /usr/src/netpbm-10.39.00-1.tar.bz2
+  /usr/src/netpbm-doc-10.39.00-1.tar.bz2
 
 -------------------------------------------
 
 Files included in the binary packages:
 
 (netpbm)
-  /etc/defaults/etc/manweb.conf
-  /etc/postinstall/netpbm.sh
   /usr/bin/411toppm.exe
   /usr/bin/anytopnm
   /usr/bin/asciitopgm.exe
@@ -94,6 +92,7 @@ Files included in the binary packages:
   /usr/bin/leaftoppm.exe
   /usr/bin/lispmtopgm.exe
   /usr/bin/macptopbm.exe
+  /usr/bin/manweb
   /usr/bin/mdatopbm.exe
   /usr/bin/mgrtopbm.exe
   /usr/bin/mrftopbm.exe
@@ -115,6 +114,7 @@ Files included in the binary packages:
   /usr/bin/pamendian.exe
   /usr/bin/pamenlarge.exe
   /usr/bin/pamfile.exe
+  /usr/bin/pamfixtrunc.exe
   /usr/bin/pamflip.exe
   /usr/bin/pamfunc.exe
   /usr/bin/pamgauss.exe
@@ -146,6 +146,7 @@ Files included in the binary packages:
   /usr/bin/pamtogif.exe
   /usr/bin/pamtohdiff.exe
   /usr/bin/pamtohtmltbl.exe
+  /usr/bin/pamtooctave.exe
   /usr/bin/pamtopfm.exe
   /usr/bin/pamtopnm.exe
   /usr/bin/pamtosvg.exe
@@ -153,6 +154,7 @@ Files included in the binary packages:
   /usr/bin/pamtotiff.exe
   /usr/bin/pamtouil.exe
   /usr/bin/pamtoxvmini.exe
+  /usr/bin/pamundice.exe
   /usr/bin/pamx.exe
   /usr/bin/pbmclean.exe
   /usr/bin/pbmlife.exe
@@ -382,8 +384,8 @@ Files included in the binary packages:
   /usr/bin/yuvsplittoppm.exe
   /usr/bin/yuvtoppm.exe
   /usr/bin/zeisstopnm.exe
-  /usr/share/doc/Cygwin/netpbm-10.37.02.README
-  /usr/share/doc/netpbm-10.37.02/README
+  /usr/share/doc/Cygwin/netpbm-10.39.00.README
+  /usr/share/doc/netpbm-10.39.00/README
   /usr/share/netpbm/palmcolor8.map
   /usr/share/netpbm/palmgray1.map
   /usr/share/netpbm/palmgray2.map
@@ -419,7 +421,6 @@ Files included in the binary packages:
 (netpbm-doc)
   /etc/defaults/etc/manweb.conf
   /etc/postinstall/netpbm.sh
-  /usr/bin/manweb
   /usr/share/man/man1/411toppm.1.gz
   /usr/share/man/man1/anytopnm.1.gz
   /usr/share/man/man1/asciitopgm.1.gz
@@ -473,6 +474,7 @@ Files included in the binary packages:
   /usr/share/man/man1/pamendian.1.gz
   /usr/share/man/man1/pamenlarge.1.gz
   /usr/share/man/man1/pamfile.1.gz
+  /usr/share/man/man1/pamfixtrunc.1.gz
   /usr/share/man/man1/pamflip.1.gz
   /usr/share/man/man1/pamfunc.1.gz
   /usr/share/man/man1/pamgauss.1.gz
@@ -504,6 +506,7 @@ Files included in the binary packages:
   /usr/share/man/man1/pamtogif.1.gz
   /usr/share/man/man1/pamtohdiff.1.gz
   /usr/share/man/man1/pamtohtmltbl.1.gz
+  /usr/share/man/man1/pamtooctave.1.gz
   /usr/share/man/man1/pamtopfm.1.gz
   /usr/share/man/man1/pamtopnm.1.gz
   /usr/share/man/man1/pamtosvg.1.gz
@@ -511,6 +514,7 @@ Files included in the binary packages:
   /usr/share/man/man1/pamtotiff.1.gz
   /usr/share/man/man1/pamtouil.1.gz
   /usr/share/man/man1/pamtoxvmini.1.gz
+  /usr/share/man/man1/pamundice.1.gz
   /usr/share/man/man1/pamx.1.gz
   /usr/share/man/man1/pbmclean.1.gz
   /usr/share/man/man1/pbmlife.1.gz
@@ -729,372 +733,380 @@ Files included in the binary packages:
   /usr/share/man/man5/pgm.5.gz
   /usr/share/man/man5/pnm.5.gz
   /usr/share/man/man5/ppm.5.gz
-  /usr/share/netpbm/manweb/411toppm.html
   /usr/share/netpbm/manweb/README
-  /usr/share/netpbm/manweb/anytopnm.html
-  /usr/share/netpbm/manweb/asciitopgm.html
-  /usr/share/netpbm/manweb/atktopbm.html
-  /usr/share/netpbm/manweb/bioradtopgm.html
-  /usr/share/netpbm/manweb/blend1.gif
-  /usr/share/netpbm/manweb/blend3.gif
-  /usr/share/netpbm/manweb/blend4.gif
-  /usr/share/netpbm/manweb/blend6.gif
-  /usr/share/netpbm/manweb/blend7.gif
-  /usr/share/netpbm/manweb/bmptopnm.html
-  /usr/share/netpbm/manweb/bmptoppm.html
-  /usr/share/netpbm/manweb/brushtopbm.html
-  /usr/share/netpbm/manweb/cameratopam.html
   /usr/share/netpbm/manweb/change.html
-  /usr/share/netpbm/manweb/cmuwmtopbm.html
-  /usr/share/netpbm/manweb/ddbugtopbm.html
-  /usr/share/netpbm/manweb/directory.html
-  /usr/share/netpbm/manweb/error.html
-  /usr/share/netpbm/manweb/escp2topbm.html
-  /usr/share/netpbm/manweb/extendedopacity.html
-  /usr/share/netpbm/manweb/eyuvtoppm.html
-  /usr/share/netpbm/manweb/fiascotopnm.html
-  /usr/share/netpbm/manweb/fitstopnm.html
-  /usr/share/netpbm/manweb/flatebug.png
-  /usr/share/netpbm/manweb/fstopgm.html
-  /usr/share/netpbm/manweb/g3topbm.html
-  /usr/share/netpbm/manweb/gemtopbm.html
-  /usr/share/netpbm/manweb/gemtopnm.html
+  /usr/share/netpbm/manweb/doc/411toppm.html
+  /usr/share/netpbm/manweb/doc/anytopnm.html
+  /usr/share/netpbm/manweb/doc/asciitopgm.html
+  /usr/share/netpbm/manweb/doc/atktopbm.html
+  /usr/share/netpbm/manweb/doc/bioradtopgm.html
+  /usr/share/netpbm/manweb/doc/blend1.gif
+  /usr/share/netpbm/manweb/doc/blend3.gif
+  /usr/share/netpbm/manweb/doc/blend4.gif
+  /usr/share/netpbm/manweb/doc/blend6.gif
+  /usr/share/netpbm/manweb/doc/blend7.gif
+  /usr/share/netpbm/manweb/doc/bmptopnm.html
+  /usr/share/netpbm/manweb/doc/bmptoppm.html
+  /usr/share/netpbm/manweb/doc/brushtopbm.html
+  /usr/share/netpbm/manweb/doc/cameratopam.html
+  /usr/share/netpbm/manweb/doc/cmuwmtopbm.html
+  /usr/share/netpbm/manweb/doc/ddbugtopbm.html
+  /usr/share/netpbm/manweb/doc/directory.html
+  /usr/share/netpbm/manweb/doc/error.html
+  /usr/share/netpbm/manweb/doc/escp2topbm.html
+  /usr/share/netpbm/manweb/doc/extendedopacity.html
+  /usr/share/netpbm/manweb/doc/eyuvtoppm.html
+  /usr/share/netpbm/manweb/doc/fiascotopnm.html
+  /usr/share/netpbm/manweb/doc/fitstopnm.html
+  /usr/share/netpbm/manweb/doc/flatebug.png
+  /usr/share/netpbm/manweb/doc/fstopgm.html
+  /usr/share/netpbm/manweb/doc/g3topbm.html
+  /usr/share/netpbm/manweb/doc/gemtopbm.html
+  /usr/share/netpbm/manweb/doc/gemtopnm.html
+  /usr/share/netpbm/manweb/doc/giftopnm.html
+  /usr/share/netpbm/manweb/doc/globe.jpg
+  /usr/share/netpbm/manweb/doc/gobot.gif
+  /usr/share/netpbm/manweb/doc/gouldtoppm.html
+  /usr/share/netpbm/manweb/doc/hdifftopam.html
+  /usr/share/netpbm/manweb/doc/hipstopgm.html
+  /usr/share/netpbm/manweb/doc/hpcdtoppm.html
+  /usr/share/netpbm/manweb/doc/icontopbm.html
+  /usr/share/netpbm/manweb/doc/ilbmtoppm.html
+  /usr/share/netpbm/manweb/doc/imgtoppm.html
+  /usr/share/netpbm/manweb/doc/index.html
+  /usr/share/netpbm/manweb/doc/infotopam.html
+  /usr/share/netpbm/manweb/doc/jbigtopnm.html
+  /usr/share/netpbm/manweb/doc/jpeg2ktopam.html
+  /usr/share/netpbm/manweb/doc/jpegtopnm.html
+  /usr/share/netpbm/manweb/doc/leaftoppm.html
+  /usr/share/netpbm/manweb/doc/libnetpbm.html
+  /usr/share/netpbm/manweb/doc/libnetpbm_dir.html
+  /usr/share/netpbm/manweb/doc/libnetpbm_draw.html
+  /usr/share/netpbm/manweb/doc/libnetpbm_image.html
+  /usr/share/netpbm/manweb/doc/libnetpbm_ug.html
+  /usr/share/netpbm/manweb/doc/libpbm.html
+  /usr/share/netpbm/manweb/doc/libpgm.html
+  /usr/share/netpbm/manweb/doc/libpm.html
+  /usr/share/netpbm/manweb/doc/libpnm.html
+  /usr/share/netpbm/manweb/doc/libppm.html
+  /usr/share/netpbm/manweb/doc/libsystem.html
+  /usr/share/netpbm/manweb/doc/libtmpfile.html
+  /usr/share/netpbm/manweb/doc/lispmtopgm.html
+  /usr/share/netpbm/manweb/doc/macptopbm.html
+  /usr/share/netpbm/manweb/doc/mdatopbm.html
+  /usr/share/netpbm/manweb/doc/mgrtopbm.html
+  /usr/share/netpbm/manweb/doc/mrf.html
+  /usr/share/netpbm/manweb/doc/mrftopbm.html
+  /usr/share/netpbm/manweb/doc/mtvtoppm.html
+  /usr/share/netpbm/manweb/doc/neotoppm.html
+  /usr/share/netpbm/manweb/doc/palmtopnm.html
+  /usr/share/netpbm/manweb/doc/pam.html
+  /usr/share/netpbm/manweb/doc/pamaddnoise.html
+  /usr/share/netpbm/manweb/doc/pamarith.html
+  /usr/share/netpbm/manweb/doc/pambackground.html
+  /usr/share/netpbm/manweb/doc/pambayer.html
+  /usr/share/netpbm/manweb/doc/pamchannel.html
+  /usr/share/netpbm/manweb/doc/pamcomp.html
+  /usr/share/netpbm/manweb/doc/pamcut.html
+  /usr/share/netpbm/manweb/doc/pamdeinterlace.html
+  /usr/share/netpbm/manweb/doc/pamdepth.html
+  /usr/share/netpbm/manweb/doc/pamdice.html
+  /usr/share/netpbm/manweb/doc/pamditherbw.html
+  /usr/share/netpbm/manweb/doc/pamedge.html
+  /usr/share/netpbm/manweb/doc/pamendian.html
+  /usr/share/netpbm/manweb/doc/pamenlarge.html
+  /usr/share/netpbm/manweb/doc/pamfile.html
+  /usr/share/netpbm/manweb/doc/pamfixtrunc.html
+  /usr/share/netpbm/manweb/doc/pamflip.html
+  /usr/share/netpbm/manweb/doc/pamfunc.html
+  /usr/share/netpbm/manweb/doc/pamgauss.html
+  /usr/share/netpbm/manweb/doc/pamgradient.html
+  /usr/share/netpbm/manweb/doc/pamlookup.html
+  /usr/share/netpbm/manweb/doc/pammasksharpen.html
+  /usr/share/netpbm/manweb/doc/pammixinterlace.html
+  /usr/share/netpbm/manweb/doc/pamoil.html
+  /usr/share/netpbm/manweb/doc/pamperspective.html
+  /usr/share/netpbm/manweb/doc/pampick.html
+  /usr/share/netpbm/manweb/doc/pampop9.html
+  /usr/share/netpbm/manweb/doc/pamrgbatopng.html
+  /usr/share/netpbm/manweb/doc/pamscale.html
+  /usr/share/netpbm/manweb/doc/pamseq.html
+  /usr/share/netpbm/manweb/doc/pamsharpmap.html
+  /usr/share/netpbm/manweb/doc/pamsharpness.html
+  /usr/share/netpbm/manweb/doc/pamslice.html
+  /usr/share/netpbm/manweb/doc/pamsplit.html
+  /usr/share/netpbm/manweb/doc/pamstack.html
+  /usr/share/netpbm/manweb/doc/pamstereogram.html
+  /usr/share/netpbm/manweb/doc/pamstretch-gen.html
+  /usr/share/netpbm/manweb/doc/pamstretch.html
+  /usr/share/netpbm/manweb/doc/pamsumm.html
+  /usr/share/netpbm/manweb/doc/pamsummcol.html
+  /usr/share/netpbm/manweb/doc/pamthreshold.html
+  /usr/share/netpbm/manweb/doc/pamtilt.html
+  /usr/share/netpbm/manweb/doc/pamtodjvurle.html
+  /usr/share/netpbm/manweb/doc/pamtofits.html
+  /usr/share/netpbm/manweb/doc/pamtogif.html
+  /usr/share/netpbm/manweb/doc/pamtohdiff.html
+  /usr/share/netpbm/manweb/doc/pamtohtmltbl.html
+  /usr/share/netpbm/manweb/doc/pamtojpeg2k.html
+  /usr/share/netpbm/manweb/doc/pamtooctaveimg.html
+  /usr/share/netpbm/manweb/doc/pamtopfm.html
+  /usr/share/netpbm/manweb/doc/pamtopnm.html
+  /usr/share/netpbm/manweb/doc/pamtosvg.html
+  /usr/share/netpbm/manweb/doc/pamtotga.html
+  /usr/share/netpbm/manweb/doc/pamtotiff.html
+  /usr/share/netpbm/manweb/doc/pamtouil.html
+  /usr/share/netpbm/manweb/doc/pamtoxvmini.html
+  /usr/share/netpbm/manweb/doc/pamundice.html
+  /usr/share/netpbm/manweb/doc/pamx.html
+  /usr/share/netpbm/manweb/doc/pbm.html
+  /usr/share/netpbm/manweb/doc/pbmclean.html
+  /usr/share/netpbm/manweb/doc/pbmlife.html
+  /usr/share/netpbm/manweb/doc/pbmmake.html
+  /usr/share/netpbm/manweb/doc/pbmmask.html
+  /usr/share/netpbm/manweb/doc/pbmpage.html
+  /usr/share/netpbm/manweb/doc/pbmpscale.html
+  /usr/share/netpbm/manweb/doc/pbmreduce.html
+  /usr/share/netpbm/manweb/doc/pbmtext.html
+  /usr/share/netpbm/manweb/doc/pbmtextps.html
+  /usr/share/netpbm/manweb/doc/pbmto10x.html
+  /usr/share/netpbm/manweb/doc/pbmto4425.html
+  /usr/share/netpbm/manweb/doc/pbmtoascii.html
+  /usr/share/netpbm/manweb/doc/pbmtoatk.html
+  /usr/share/netpbm/manweb/doc/pbmtobbnbg.html
+  /usr/share/netpbm/manweb/doc/pbmtocmuwm.html
+  /usr/share/netpbm/manweb/doc/pbmtodjvurle.html
+  /usr/share/netpbm/manweb/doc/pbmtoepsi.html
+  /usr/share/netpbm/manweb/doc/pbmtoepson.html
+  /usr/share/netpbm/manweb/doc/pbmtoescp2.html
+  /usr/share/netpbm/manweb/doc/pbmtog3.html
+  /usr/share/netpbm/manweb/doc/pbmtogem.html
+  /usr/share/netpbm/manweb/doc/pbmtogo.html
+  /usr/share/netpbm/manweb/doc/pbmtoibm23xx.html
+  /usr/share/netpbm/manweb/doc/pbmtoicon.html
+  /usr/share/netpbm/manweb/doc/pbmtolj.html
+  /usr/share/netpbm/manweb/doc/pbmtoln03.html
+  /usr/share/netpbm/manweb/doc/pbmtolps.html
+  /usr/share/netpbm/manweb/doc/pbmtomacp.html
+  /usr/share/netpbm/manweb/doc/pbmtomda.html
+  /usr/share/netpbm/manweb/doc/pbmtomgr.html
+  /usr/share/netpbm/manweb/doc/pbmtomrf.html
+  /usr/share/netpbm/manweb/doc/pbmtonokia.html
+  /usr/share/netpbm/manweb/doc/pbmtopgm.html
+  /usr/share/netpbm/manweb/doc/pbmtopi3.html
+  /usr/share/netpbm/manweb/doc/pbmtopk.html
+  /usr/share/netpbm/manweb/doc/pbmtoplot.html
+  /usr/share/netpbm/manweb/doc/pbmtoppa.html
+  /usr/share/netpbm/manweb/doc/pbmtopsg3.html
+  /usr/share/netpbm/manweb/doc/pbmtoptx.html
+  /usr/share/netpbm/manweb/doc/pbmtowbmp.html
+  /usr/share/netpbm/manweb/doc/pbmtox10bm.html
+  /usr/share/netpbm/manweb/doc/pbmtoxbm.html
+  /usr/share/netpbm/manweb/doc/pbmtoybm.html
+  /usr/share/netpbm/manweb/doc/pbmtozinc.html
+  /usr/share/netpbm/manweb/doc/pbmupc.html
+  /usr/share/netpbm/manweb/doc/pc1toppm.html
+  /usr/share/netpbm/manweb/doc/pcdovtoppm.html
+  /usr/share/netpbm/manweb/doc/pcxtoppm.html
+  /usr/share/netpbm/manweb/doc/pfm.html
+  /usr/share/netpbm/manweb/doc/pfmtopam.html
+  /usr/share/netpbm/manweb/doc/pgm.html
+  /usr/share/netpbm/manweb/doc/pgmabel.html
+  /usr/share/netpbm/manweb/doc/pgmbentley.html
+  /usr/share/netpbm/manweb/doc/pgmcrater.html
+  /usr/share/netpbm/manweb/doc/pgmdeshadow.html
+  /usr/share/netpbm/manweb/doc/pgmedge.html
+  /usr/share/netpbm/manweb/doc/pgmenhance.html
+  /usr/share/netpbm/manweb/doc/pgmhist.html
+  /usr/share/netpbm/manweb/doc/pgmkernel.html
+  /usr/share/netpbm/manweb/doc/pgmmake.html
+  /usr/share/netpbm/manweb/doc/pgmmedian.html
+  /usr/share/netpbm/manweb/doc/pgmminkowski.html
+  /usr/share/netpbm/manweb/doc/pgmmorphconv.html
+  /usr/share/netpbm/manweb/doc/pgmnoise.html
+  /usr/share/netpbm/manweb/doc/pgmnorm.html
+  /usr/share/netpbm/manweb/doc/pgmoil.html
+  /usr/share/netpbm/manweb/doc/pgmramp.html
+  /usr/share/netpbm/manweb/doc/pgmslice.html
+  /usr/share/netpbm/manweb/doc/pgmtexture.html
+  /usr/share/netpbm/manweb/doc/pgmtofs.html
+  /usr/share/netpbm/manweb/doc/pgmtolispm.html
+  /usr/share/netpbm/manweb/doc/pgmtopbm.html
+  /usr/share/netpbm/manweb/doc/pgmtopgm.html
+  /usr/share/netpbm/manweb/doc/pgmtoppm.html
+  /usr/share/netpbm/manweb/doc/pi1toppm.html
+  /usr/share/netpbm/manweb/doc/pi3topbm.html
+  /usr/share/netpbm/manweb/doc/picttoppm.html
+  /usr/share/netpbm/manweb/doc/pjtoppm.html
+  /usr/share/netpbm/manweb/doc/pktopbm.html
+  /usr/share/netpbm/manweb/doc/pngtopnm.html
+  /usr/share/netpbm/manweb/doc/pnm.html
+  /usr/share/netpbm/manweb/doc/pnmalias.html
+  /usr/share/netpbm/manweb/doc/pnmarith.html
+  /usr/share/netpbm/manweb/doc/pnmcat.html
+  /usr/share/netpbm/manweb/doc/pnmcolormap.html
+  /usr/share/netpbm/manweb/doc/pnmcomp.html
+  /usr/share/netpbm/manweb/doc/pnmconvol.html
+  /usr/share/netpbm/manweb/doc/pnmcrop.html
+  /usr/share/netpbm/manweb/doc/pnmcut.html
+  /usr/share/netpbm/manweb/doc/pnmdepth.html
+  /usr/share/netpbm/manweb/doc/pnmfile.html
+  /usr/share/netpbm/manweb/doc/pnmgamma.html
+  /usr/share/netpbm/manweb/doc/pnmhisteq.html
+  /usr/share/netpbm/manweb/doc/pnmhistmap.html
+  /usr/share/netpbm/manweb/doc/pnmindex.html
+  /usr/share/netpbm/manweb/doc/pnminterp.html
+  /usr/share/netpbm/manweb/doc/pnminvert.html
+  /usr/share/netpbm/manweb/doc/pnmmargin.html
+  /usr/share/netpbm/manweb/doc/pnmmontage.html
+  /usr/share/netpbm/manweb/doc/pnmnlfilt.html
+  /usr/share/netpbm/manweb/doc/pnmnoraw.html
+  /usr/share/netpbm/manweb/doc/pnmnorm.html
+  /usr/share/netpbm/manweb/doc/pnmpad.html
+  /usr/share/netpbm/manweb/doc/pnmpaste.html
+  /usr/share/netpbm/manweb/doc/pnmpsnr.html
+  /usr/share/netpbm/manweb/doc/pnmquant.html
+  /usr/share/netpbm/manweb/doc/pnmremap.html
+  /usr/share/netpbm/manweb/doc/pnmrotate.html
+  /usr/share/netpbm/manweb/doc/pnmscale.html
+  /usr/share/netpbm/manweb/doc/pnmscalefixed.html
+  /usr/share/netpbm/manweb/doc/pnmshear.html
+  /usr/share/netpbm/manweb/doc/pnmsmooth.html
+  /usr/share/netpbm/manweb/doc/pnmsplit.html
+  /usr/share/netpbm/manweb/doc/pnmstitch.html
+  /usr/share/netpbm/manweb/doc/pnmtile.html
+  /usr/share/netpbm/manweb/doc/pnmtoddif.html
+  /usr/share/netpbm/manweb/doc/pnmtofiasco.html
+  /usr/share/netpbm/manweb/doc/pnmtofits.html
+  /usr/share/netpbm/manweb/doc/pnmtojbig.html
+  /usr/share/netpbm/manweb/doc/pnmtojpeg.html
+  /usr/share/netpbm/manweb/doc/pnmtopalm.html
+  /usr/share/netpbm/manweb/doc/pnmtopclxl.html
+  /usr/share/netpbm/manweb/doc/pnmtoplainpnm.html
+  /usr/share/netpbm/manweb/doc/pnmtopng.html
+  /usr/share/netpbm/manweb/doc/pnmtopnm.html
+  /usr/share/netpbm/manweb/doc/pnmtops.html
+  /usr/share/netpbm/manweb/doc/pnmtorast.html
+  /usr/share/netpbm/manweb/doc/pnmtorle.html
+  /usr/share/netpbm/manweb/doc/pnmtosgi.html
+  /usr/share/netpbm/manweb/doc/pnmtosir.html
+  /usr/share/netpbm/manweb/doc/pnmtotiff.html
+  /usr/share/netpbm/manweb/doc/pnmtotiffcmyk.html
+  /usr/share/netpbm/manweb/doc/pnmtoxwd.html
+  /usr/share/netpbm/manweb/doc/ppm.html
+  /usr/share/netpbm/manweb/doc/ppm3d.html
+  /usr/share/netpbm/manweb/doc/ppmbrighten.html
+  /usr/share/netpbm/manweb/doc/ppmchange.html
+  /usr/share/netpbm/manweb/doc/ppmcie.html
+  /usr/share/netpbm/manweb/doc/ppmcolormask.html
+  /usr/share/netpbm/manweb/doc/ppmdcfont.html
+  /usr/share/netpbm/manweb/doc/ppmddumpfont.html
+  /usr/share/netpbm/manweb/doc/ppmdim.html
+  /usr/share/netpbm/manweb/doc/ppmdist.html
+  /usr/share/netpbm/manweb/doc/ppmdither.html
+  /usr/share/netpbm/manweb/doc/ppmdmkfont.html
+  /usr/share/netpbm/manweb/doc/ppmdraw.html
+  /usr/share/netpbm/manweb/doc/ppmfade.html
+  /usr/share/netpbm/manweb/doc/ppmflash.html
+  /usr/share/netpbm/manweb/doc/ppmforge.html
+  /usr/share/netpbm/manweb/doc/ppmglobe.html
+  /usr/share/netpbm/manweb/doc/ppmhist.html
+  /usr/share/netpbm/manweb/doc/ppmlabel.html
+  /usr/share/netpbm/manweb/doc/ppmmake.html
+  /usr/share/netpbm/manweb/doc/ppmmix.html
+  /usr/share/netpbm/manweb/doc/ppmnorm.html
+  /usr/share/netpbm/manweb/doc/ppmntsc.html
+  /usr/share/netpbm/manweb/doc/ppmpat.html
+  /usr/share/netpbm/manweb/doc/ppmquant.html
+  /usr/share/netpbm/manweb/doc/ppmquantall.html
+  /usr/share/netpbm/manweb/doc/ppmrainbow.html
+  /usr/share/netpbm/manweb/doc/ppmrelief.html
+  /usr/share/netpbm/manweb/doc/ppmrough.html
+  /usr/share/netpbm/manweb/doc/ppmshadow.html
+  /usr/share/netpbm/manweb/doc/ppmshift.html
+  /usr/share/netpbm/manweb/doc/ppmspread.html
+  /usr/share/netpbm/manweb/doc/ppmsvgalib.html
+  /usr/share/netpbm/manweb/doc/ppmtoacad.html
+  /usr/share/netpbm/manweb/doc/ppmtoarbtxt.html
+  /usr/share/netpbm/manweb/doc/ppmtobmp.html
+  /usr/share/netpbm/manweb/doc/ppmtoeyuv.html
+  /usr/share/netpbm/manweb/doc/ppmtogif.html
+  /usr/share/netpbm/manweb/doc/ppmtoicr.html
+  /usr/share/netpbm/manweb/doc/ppmtoilbm.html
+  /usr/share/netpbm/manweb/doc/ppmtojpeg.html
+  /usr/share/netpbm/manweb/doc/ppmtoleaf.html
+  /usr/share/netpbm/manweb/doc/ppmtolj.html
+  /usr/share/netpbm/manweb/doc/ppmtomitsu.html
+  /usr/share/netpbm/manweb/doc/ppmtompeg-par.gif
+  /usr/share/netpbm/manweb/doc/ppmtompeg-snr.gif
+  /usr/share/netpbm/manweb/doc/ppmtompeg.html
+  /usr/share/netpbm/manweb/doc/ppmtoneo.html
+  /usr/share/netpbm/manweb/doc/ppmtopcx.html
+  /usr/share/netpbm/manweb/doc/ppmtopgm.html
+  /usr/share/netpbm/manweb/doc/ppmtopi1.html
+  /usr/share/netpbm/manweb/doc/ppmtopict.html
+  /usr/share/netpbm/manweb/doc/ppmtopj.html
+  /usr/share/netpbm/manweb/doc/ppmtopjxl.html
+  /usr/share/netpbm/manweb/doc/ppmtoppm.html
+  /usr/share/netpbm/manweb/doc/ppmtopuzz.html
+  /usr/share/netpbm/manweb/doc/ppmtorgb3.html
+  /usr/share/netpbm/manweb/doc/ppmtosixel.html
+  /usr/share/netpbm/manweb/doc/ppmtoterm.html
+  /usr/share/netpbm/manweb/doc/ppmtotga.html
+  /usr/share/netpbm/manweb/doc/ppmtouil.html
+  /usr/share/netpbm/manweb/doc/ppmtowinicon.html
+  /usr/share/netpbm/manweb/doc/ppmtoxpm.html
+  /usr/share/netpbm/manweb/doc/ppmtoyuv.html
+  /usr/share/netpbm/manweb/doc/ppmtoyuvsplit.html
+  /usr/share/netpbm/manweb/doc/ppmtv.html
+  /usr/share/netpbm/manweb/doc/ppmwheel.html
+  /usr/share/netpbm/manweb/doc/psidtopgm.html
+  /usr/share/netpbm/manweb/doc/pstopnm.html
+  /usr/share/netpbm/manweb/doc/qrttoppm.html
+  /usr/share/netpbm/manweb/doc/rasttopnm.html
+  /usr/share/netpbm/manweb/doc/rawtopgm.html
+  /usr/share/netpbm/manweb/doc/rawtoppm.html
+  /usr/share/netpbm/manweb/doc/rgb3toppm.html
+  /usr/share/netpbm/manweb/doc/rlatopam.html
+  /usr/share/netpbm/manweb/doc/rletopnm.html
+  /usr/share/netpbm/manweb/doc/sbigtopgm.html
+  /usr/share/netpbm/manweb/doc/sgitopnm.html
+  /usr/share/netpbm/manweb/doc/sirtopnm.html
+  /usr/share/netpbm/manweb/doc/sldtoppm.html
+  /usr/share/netpbm/manweb/doc/spctoppm.html
+  /usr/share/netpbm/manweb/doc/spottopgm.html
+  /usr/share/netpbm/manweb/doc/sputoppm.html
+  /usr/share/netpbm/manweb/doc/testimg.png
+  /usr/share/netpbm/manweb/doc/testimg_histbar.png
+  /usr/share/netpbm/manweb/doc/testimg_histdot.png
+  /usr/share/netpbm/manweb/doc/tgatoppm.html
+  /usr/share/netpbm/manweb/doc/thinkjettopbm.html
+  /usr/share/netpbm/manweb/doc/tifftopnm.html
+  /usr/share/netpbm/manweb/doc/vidtoppm.html
+  /usr/share/netpbm/manweb/doc/wbmptopbm.html
+  /usr/share/netpbm/manweb/doc/winicontoppm.html
+  /usr/share/netpbm/manweb/doc/xbmtopbm.html
+  /usr/share/netpbm/manweb/doc/ximtoppm.html
+  /usr/share/netpbm/manweb/doc/xpmtoppm.html
+  /usr/share/netpbm/manweb/doc/xvminitoppm.html
+  /usr/share/netpbm/manweb/doc/xwdtopnm.html
+  /usr/share/netpbm/manweb/doc/ybmtopbm.html
+  /usr/share/netpbm/manweb/doc/yuvsplittoppm.html
+  /usr/share/netpbm/manweb/doc/yuvtoppm.html
+  /usr/share/netpbm/manweb/doc/zeisstopnm.html
   /usr/share/netpbm/manweb/gettingsubversion.html
-  /usr/share/netpbm/manweb/giftopnm.html
-  /usr/share/netpbm/manweb/globe.jpg
-  /usr/share/netpbm/manweb/gobot.gif
-  /usr/share/netpbm/manweb/gouldtoppm.html
-  /usr/share/netpbm/manweb/hdifftopam.html
-  /usr/share/netpbm/manweb/hipstopgm.html
   /usr/share/netpbm/manweb/history.html
-  /usr/share/netpbm/manweb/hpcdtoppm.html
-  /usr/share/netpbm/manweb/icontopbm.html
-  /usr/share/netpbm/manweb/ilbmtoppm.html
-  /usr/share/netpbm/manweb/imgtoppm.html
   /usr/share/netpbm/manweb/index.html
-  /usr/share/netpbm/manweb/infotopam.html
-  /usr/share/netpbm/manweb/jbigtopnm.html
-  /usr/share/netpbm/manweb/jpeg2ktopam.html
-  /usr/share/netpbm/manweb/jpegtopnm.html
-  /usr/share/netpbm/manweb/leaftoppm.html
-  /usr/share/netpbm/manweb/libnetpbm.html
-  /usr/share/netpbm/manweb/libnetpbm_dir.html
-  /usr/share/netpbm/manweb/libnetpbm_draw.html
-  /usr/share/netpbm/manweb/libnetpbm_image.html
-  /usr/share/netpbm/manweb/libnetpbm_ug.html
-  /usr/share/netpbm/manweb/libpbm.html
-  /usr/share/netpbm/manweb/libpgm.html
-  /usr/share/netpbm/manweb/libpm.html
-  /usr/share/netpbm/manweb/libpnm.html
-  /usr/share/netpbm/manweb/libppm.html
-  /usr/share/netpbm/manweb/libsystem.html
-  /usr/share/netpbm/manweb/libtmpfile.html
-  /usr/share/netpbm/manweb/lispmtopgm.html
-  /usr/share/netpbm/manweb/macptopbm.html
-  /usr/share/netpbm/manweb/mdatopbm.html
-  /usr/share/netpbm/manweb/mgrtopbm.html
-  /usr/share/netpbm/manweb/mrf.html
-  /usr/share/netpbm/manweb/mrftopbm.html
-  /usr/share/netpbm/manweb/mtvtoppm.html
-  /usr/share/netpbm/manweb/neotoppm.html
   /usr/share/netpbm/manweb/overflow.html
-  /usr/share/netpbm/manweb/palmtopnm.html
-  /usr/share/netpbm/manweb/pam.html
-  /usr/share/netpbm/manweb/pamaddnoise.html
-  /usr/share/netpbm/manweb/pamarith.html
-  /usr/share/netpbm/manweb/pambackground.html
-  /usr/share/netpbm/manweb/pambayer.html
-  /usr/share/netpbm/manweb/pamchannel.html
-  /usr/share/netpbm/manweb/pamcomp.html
-  /usr/share/netpbm/manweb/pamcut.html
-  /usr/share/netpbm/manweb/pamdeinterlace.html
-  /usr/share/netpbm/manweb/pamdepth.html
-  /usr/share/netpbm/manweb/pamdice.html
-  /usr/share/netpbm/manweb/pamditherbw.html
-  /usr/share/netpbm/manweb/pamedge.html
-  /usr/share/netpbm/manweb/pamendian.html
-  /usr/share/netpbm/manweb/pamenlarge.html
-  /usr/share/netpbm/manweb/pamfile.html
-  /usr/share/netpbm/manweb/pamflip.html
-  /usr/share/netpbm/manweb/pamfunc.html
-  /usr/share/netpbm/manweb/pamgauss.html
-  /usr/share/netpbm/manweb/pamgradient.html
-  /usr/share/netpbm/manweb/pamlookup.html
-  /usr/share/netpbm/manweb/pammasksharpen.html
-  /usr/share/netpbm/manweb/pammixinterlace.html
-  /usr/share/netpbm/manweb/pamoil.html
-  /usr/share/netpbm/manweb/pamperspective.html
-  /usr/share/netpbm/manweb/pampick.html
-  /usr/share/netpbm/manweb/pampop9.html
-  /usr/share/netpbm/manweb/pamrgbatopng.html
-  /usr/share/netpbm/manweb/pamscale.html
-  /usr/share/netpbm/manweb/pamseq.html
-  /usr/share/netpbm/manweb/pamsharpmap.html
-  /usr/share/netpbm/manweb/pamsharpness.html
-  /usr/share/netpbm/manweb/pamslice.html
-  /usr/share/netpbm/manweb/pamsplit.html
-  /usr/share/netpbm/manweb/pamstack.html
-  /usr/share/netpbm/manweb/pamstereogram.html
-  /usr/share/netpbm/manweb/pamstretch-gen.html
-  /usr/share/netpbm/manweb/pamstretch.html
-  /usr/share/netpbm/manweb/pamsumm.html
-  /usr/share/netpbm/manweb/pamsummcol.html
-  /usr/share/netpbm/manweb/pamthreshold.html
-  /usr/share/netpbm/manweb/pamtilt.html
-  /usr/share/netpbm/manweb/pamtodjvurle.html
-  /usr/share/netpbm/manweb/pamtofits.html
-  /usr/share/netpbm/manweb/pamtogif.html
-  /usr/share/netpbm/manweb/pamtohdiff.html
-  /usr/share/netpbm/manweb/pamtohtmltbl.html
-  /usr/share/netpbm/manweb/pamtojpeg2k.html
-  /usr/share/netpbm/manweb/pamtopfm.html
-  /usr/share/netpbm/manweb/pamtopnm.html
-  /usr/share/netpbm/manweb/pamtosvg.html
-  /usr/share/netpbm/manweb/pamtotga.html
-  /usr/share/netpbm/manweb/pamtotiff.html
-  /usr/share/netpbm/manweb/pamtouil.html
-  /usr/share/netpbm/manweb/pamtoxvmini.html
-  /usr/share/netpbm/manweb/pamx.html
-  /usr/share/netpbm/manweb/pbm.html
-  /usr/share/netpbm/manweb/pbmclean.html
-  /usr/share/netpbm/manweb/pbmlife.html
-  /usr/share/netpbm/manweb/pbmmake.html
-  /usr/share/netpbm/manweb/pbmmask.html
-  /usr/share/netpbm/manweb/pbmpage.html
-  /usr/share/netpbm/manweb/pbmpscale.html
-  /usr/share/netpbm/manweb/pbmreduce.html
-  /usr/share/netpbm/manweb/pbmtext.html
-  /usr/share/netpbm/manweb/pbmtextps.html
-  /usr/share/netpbm/manweb/pbmto10x.html
-  /usr/share/netpbm/manweb/pbmto4425.html
-  /usr/share/netpbm/manweb/pbmtoascii.html
-  /usr/share/netpbm/manweb/pbmtoatk.html
-  /usr/share/netpbm/manweb/pbmtobbnbg.html
-  /usr/share/netpbm/manweb/pbmtocmuwm.html
-  /usr/share/netpbm/manweb/pbmtodjvurle.html
-  /usr/share/netpbm/manweb/pbmtoepsi.html
-  /usr/share/netpbm/manweb/pbmtoepson.html
-  /usr/share/netpbm/manweb/pbmtoescp2.html
-  /usr/share/netpbm/manweb/pbmtog3.html
-  /usr/share/netpbm/manweb/pbmtogem.html
-  /usr/share/netpbm/manweb/pbmtogo.html
-  /usr/share/netpbm/manweb/pbmtoibm23xx.html
-  /usr/share/netpbm/manweb/pbmtoicon.html
-  /usr/share/netpbm/manweb/pbmtolj.html
-  /usr/share/netpbm/manweb/pbmtoln03.html
-  /usr/share/netpbm/manweb/pbmtolps.html
-  /usr/share/netpbm/manweb/pbmtomacp.html
-  /usr/share/netpbm/manweb/pbmtomda.html
-  /usr/share/netpbm/manweb/pbmtomgr.html
-  /usr/share/netpbm/manweb/pbmtomrf.html
-  /usr/share/netpbm/manweb/pbmtonokia.html
-  /usr/share/netpbm/manweb/pbmtopgm.html
-  /usr/share/netpbm/manweb/pbmtopi3.html
-  /usr/share/netpbm/manweb/pbmtopk.html
-  /usr/share/netpbm/manweb/pbmtoplot.html
-  /usr/share/netpbm/manweb/pbmtoppa.html
-  /usr/share/netpbm/manweb/pbmtopsg3.html
-  /usr/share/netpbm/manweb/pbmtoptx.html
-  /usr/share/netpbm/manweb/pbmtowbmp.html
-  /usr/share/netpbm/manweb/pbmtox10bm.html
-  /usr/share/netpbm/manweb/pbmtoxbm.html
-  /usr/share/netpbm/manweb/pbmtoybm.html
-  /usr/share/netpbm/manweb/pbmtozinc.html
-  /usr/share/netpbm/manweb/pbmupc.html
-  /usr/share/netpbm/manweb/pc1toppm.html
-  /usr/share/netpbm/manweb/pcdovtoppm.html
-  /usr/share/netpbm/manweb/pcxtoppm.html
-  /usr/share/netpbm/manweb/pfm.html
-  /usr/share/netpbm/manweb/pfmtopam.html
-  /usr/share/netpbm/manweb/pgm.html
-  /usr/share/netpbm/manweb/pgmabel.html
-  /usr/share/netpbm/manweb/pgmbentley.html
-  /usr/share/netpbm/manweb/pgmcrater.html
-  /usr/share/netpbm/manweb/pgmdeshadow.html
-  /usr/share/netpbm/manweb/pgmedge.html
-  /usr/share/netpbm/manweb/pgmenhance.html
-  /usr/share/netpbm/manweb/pgmhist.html
-  /usr/share/netpbm/manweb/pgmkernel.html
-  /usr/share/netpbm/manweb/pgmmake.html
-  /usr/share/netpbm/manweb/pgmmedian.html
-  /usr/share/netpbm/manweb/pgmminkowski.html
-  /usr/share/netpbm/manweb/pgmmorphconv.html
-  /usr/share/netpbm/manweb/pgmnoise.html
-  /usr/share/netpbm/manweb/pgmnorm.html
-  /usr/share/netpbm/manweb/pgmoil.html
-  /usr/share/netpbm/manweb/pgmramp.html
-  /usr/share/netpbm/manweb/pgmslice.html
-  /usr/share/netpbm/manweb/pgmtexture.html
-  /usr/share/netpbm/manweb/pgmtofs.html
-  /usr/share/netpbm/manweb/pgmtolispm.html
-  /usr/share/netpbm/manweb/pgmtopbm.html
-  /usr/share/netpbm/manweb/pgmtopgm.html
-  /usr/share/netpbm/manweb/pgmtoppm.html
-  /usr/share/netpbm/manweb/pi1toppm.html
-  /usr/share/netpbm/manweb/pi3topbm.html
-  /usr/share/netpbm/manweb/picttoppm.html
-  /usr/share/netpbm/manweb/pjtoppm.html
-  /usr/share/netpbm/manweb/pktopbm.html
-  /usr/share/netpbm/manweb/pngtopnm.html
-  /usr/share/netpbm/manweb/pnm.html
-  /usr/share/netpbm/manweb/pnmalias.html
-  /usr/share/netpbm/manweb/pnmarith.html
-  /usr/share/netpbm/manweb/pnmcat.html
-  /usr/share/netpbm/manweb/pnmcolormap.html
-  /usr/share/netpbm/manweb/pnmcomp.html
-  /usr/share/netpbm/manweb/pnmconvol.html
-  /usr/share/netpbm/manweb/pnmcrop.html
-  /usr/share/netpbm/manweb/pnmcut.html
-  /usr/share/netpbm/manweb/pnmdepth.html
-  /usr/share/netpbm/manweb/pnmfile.html
-  /usr/share/netpbm/manweb/pnmgamma.html
-  /usr/share/netpbm/manweb/pnmhisteq.html
-  /usr/share/netpbm/manweb/pnmhistmap.html
-  /usr/share/netpbm/manweb/pnmindex.html
-  /usr/share/netpbm/manweb/pnminterp.html
-  /usr/share/netpbm/manweb/pnminvert.html
-  /usr/share/netpbm/manweb/pnmmargin.html
-  /usr/share/netpbm/manweb/pnmmontage.html
-  /usr/share/netpbm/manweb/pnmnlfilt.html
-  /usr/share/netpbm/manweb/pnmnoraw.html
-  /usr/share/netpbm/manweb/pnmnorm.html
-  /usr/share/netpbm/manweb/pnmpad.html
-  /usr/share/netpbm/manweb/pnmpaste.html
-  /usr/share/netpbm/manweb/pnmpsnr.html
-  /usr/share/netpbm/manweb/pnmquant.html
-  /usr/share/netpbm/manweb/pnmremap.html
-  /usr/share/netpbm/manweb/pnmrotate.html
-  /usr/share/netpbm/manweb/pnmscale.html
-  /usr/share/netpbm/manweb/pnmscalefixed.html
-  /usr/share/netpbm/manweb/pnmshear.html
-  /usr/share/netpbm/manweb/pnmsmooth.html
-  /usr/share/netpbm/manweb/pnmsplit.html
-  /usr/share/netpbm/manweb/pnmstitch.html
-  /usr/share/netpbm/manweb/pnmtile.html
-  /usr/share/netpbm/manweb/pnmtoddif.html
-  /usr/share/netpbm/manweb/pnmtofiasco.html
-  /usr/share/netpbm/manweb/pnmtofits.html
-  /usr/share/netpbm/manweb/pnmtojbig.html
-  /usr/share/netpbm/manweb/pnmtojpeg.html
-  /usr/share/netpbm/manweb/pnmtopalm.html
-  /usr/share/netpbm/manweb/pnmtopclxl.html
-  /usr/share/netpbm/manweb/pnmtoplainpnm.html
-  /usr/share/netpbm/manweb/pnmtopng.html
-  /usr/share/netpbm/manweb/pnmtopnm.html
-  /usr/share/netpbm/manweb/pnmtops.html
-  /usr/share/netpbm/manweb/pnmtorast.html
-  /usr/share/netpbm/manweb/pnmtorle.html
-  /usr/share/netpbm/manweb/pnmtosgi.html
-  /usr/share/netpbm/manweb/pnmtosir.html
-  /usr/share/netpbm/manweb/pnmtotiff.html
-  /usr/share/netpbm/manweb/pnmtotiffcmyk.html
-  /usr/share/netpbm/manweb/pnmtoxwd.html
-  /usr/share/netpbm/manweb/ppm.html
-  /usr/share/netpbm/manweb/ppm3d.html
-  /usr/share/netpbm/manweb/ppmbrighten.html
-  /usr/share/netpbm/manweb/ppmchange.html
-  /usr/share/netpbm/manweb/ppmcie.html
-  /usr/share/netpbm/manweb/ppmcolormask.html
-  /usr/share/netpbm/manweb/ppmdcfont.html
-  /usr/share/netpbm/manweb/ppmddumpfont.html
-  /usr/share/netpbm/manweb/ppmdim.html
-  /usr/share/netpbm/manweb/ppmdist.html
-  /usr/share/netpbm/manweb/ppmdither.html
-  /usr/share/netpbm/manweb/ppmdmkfont.html
-  /usr/share/netpbm/manweb/ppmdraw.html
-  /usr/share/netpbm/manweb/ppmfade.html
-  /usr/share/netpbm/manweb/ppmflash.html
-  /usr/share/netpbm/manweb/ppmforge.html
-  /usr/share/netpbm/manweb/ppmglobe.html
-  /usr/share/netpbm/manweb/ppmhist.html
-  /usr/share/netpbm/manweb/ppmlabel.html
-  /usr/share/netpbm/manweb/ppmmake.html
-  /usr/share/netpbm/manweb/ppmmix.html
-  /usr/share/netpbm/manweb/ppmnorm.html
-  /usr/share/netpbm/manweb/ppmntsc.html
-  /usr/share/netpbm/manweb/ppmpat.html
-  /usr/share/netpbm/manweb/ppmquant.html
-  /usr/share/netpbm/manweb/ppmquantall.html
-  /usr/share/netpbm/manweb/ppmrainbow.html
-  /usr/share/netpbm/manweb/ppmrelief.html
-  /usr/share/netpbm/manweb/ppmrough.html
-  /usr/share/netpbm/manweb/ppmshadow.html
-  /usr/share/netpbm/manweb/ppmshift.html
-  /usr/share/netpbm/manweb/ppmspread.html
-  /usr/share/netpbm/manweb/ppmsvgalib.html
-  /usr/share/netpbm/manweb/ppmtoacad.html
-  /usr/share/netpbm/manweb/ppmtoarbtxt.html
-  /usr/share/netpbm/manweb/ppmtobmp.html
-  /usr/share/netpbm/manweb/ppmtoeyuv.html
-  /usr/share/netpbm/manweb/ppmtogif.html
-  /usr/share/netpbm/manweb/ppmtoicr.html
-  /usr/share/netpbm/manweb/ppmtoilbm.html
-  /usr/share/netpbm/manweb/ppmtojpeg.html
-  /usr/share/netpbm/manweb/ppmtoleaf.html
-  /usr/share/netpbm/manweb/ppmtolj.html
-  /usr/share/netpbm/manweb/ppmtomitsu.html
-  /usr/share/netpbm/manweb/ppmtompeg-par.gif
-  /usr/share/netpbm/manweb/ppmtompeg-snr.gif
-  /usr/share/netpbm/manweb/ppmtompeg.html
-  /usr/share/netpbm/manweb/ppmtoneo.html
-  /usr/share/netpbm/manweb/ppmtopcx.html
-  /usr/share/netpbm/manweb/ppmtopgm.html
-  /usr/share/netpbm/manweb/ppmtopi1.html
-  /usr/share/netpbm/manweb/ppmtopict.html
-  /usr/share/netpbm/manweb/ppmtopj.html
-  /usr/share/netpbm/manweb/ppmtopjxl.html
-  /usr/share/netpbm/manweb/ppmtoppm.html
-  /usr/share/netpbm/manweb/ppmtopuzz.html
-  /usr/share/netpbm/manweb/ppmtorgb3.html
-  /usr/share/netpbm/manweb/ppmtosixel.html
-  /usr/share/netpbm/manweb/ppmtoterm.html
-  /usr/share/netpbm/manweb/ppmtotga.html
-  /usr/share/netpbm/manweb/ppmtouil.html
-  /usr/share/netpbm/manweb/ppmtowinicon.html
-  /usr/share/netpbm/manweb/ppmtoxpm.html
-  /usr/share/netpbm/manweb/ppmtoyuv.html
-  /usr/share/netpbm/manweb/ppmtoyuvsplit.html
-  /usr/share/netpbm/manweb/ppmtv.html
-  /usr/share/netpbm/manweb/ppmwheel.html
-  /usr/share/netpbm/manweb/psidtopgm.html
-  /usr/share/netpbm/manweb/pstopnm.html
-  /usr/share/netpbm/manweb/qrttoppm.html
-  /usr/share/netpbm/manweb/rasttopnm.html
-  /usr/share/netpbm/manweb/rawtopgm.html
-  /usr/share/netpbm/manweb/rawtoppm.html
   /usr/share/netpbm/manweb/release.html
-  /usr/share/netpbm/manweb/rgb3toppm.html
-  /usr/share/netpbm/manweb/rlatopam.html
-  /usr/share/netpbm/manweb/rletopnm.html
-  /usr/share/netpbm/manweb/sbigtopgm.html
-  /usr/share/netpbm/manweb/sgitopnm.html
-  /usr/share/netpbm/manweb/sirtopnm.html
-  /usr/share/netpbm/manweb/sldtoppm.html
-  /usr/share/netpbm/manweb/spctoppm.html
-  /usr/share/netpbm/manweb/spottopgm.html
-  /usr/share/netpbm/manweb/sputoppm.html
-  /usr/share/netpbm/manweb/testimg.png
-  /usr/share/netpbm/manweb/testimg_histbar.png
-  /usr/share/netpbm/manweb/testimg_histdot.png
-  /usr/share/netpbm/manweb/tgatoppm.html
-  /usr/share/netpbm/manweb/thinkjettopbm.html
-  /usr/share/netpbm/manweb/tifftopnm.html
-  /usr/share/netpbm/manweb/vidtoppm.html
-  /usr/share/netpbm/manweb/wbmptopbm.html
-  /usr/share/netpbm/manweb/winicontoppm.html
-  /usr/share/netpbm/manweb/xbmtopbm.html
-  /usr/share/netpbm/manweb/ximtoppm.html
-  /usr/share/netpbm/manweb/xpmtoppm.html
-  /usr/share/netpbm/manweb/xvminitoppm.html
-  /usr/share/netpbm/manweb/xwdtopnm.html
-  /usr/share/netpbm/manweb/ybmtopbm.html
-  /usr/share/netpbm/manweb/yuvsplittoppm.html
-  /usr/share/netpbm/manweb/yuvtoppm.html
-  /usr/share/netpbm/manweb/zeisstopnm.html
+  /usr/share/netpbm/manweb/robots.txt
 
 ------------------
 
 Port Notes:
+
+----- version 10.39.00-1 -----
+Version bump.
 
 ----- version 10.37.02-1 -----
 Version bump.
