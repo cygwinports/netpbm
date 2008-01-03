@@ -11,25 +11,25 @@ a mirror image; Creating a sequence of images that fade from one image
 to another; etc.
 
 Runtime requirements:
-  cygwin-1.5.24-2
+  cygwin-1.5.25-7
   file
-  ghostscript-8.50-1
-  libX11_6-1.1.1-1
+  ghostscript
+  libX11_6-1.1.3-1
   libjbig2-1.6-1
   libjpeg62-6b-12
-  libpng12-1.2.12-1
+  libpng12-1.2.24-1
   libtiff5-3.8.2-3
-  libxml2-2.6.28-2
+  libxml2-2.6.30-1
   zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.24-2
+  cygwin-1.5.25-7
   binutils-20060817-1
-  cygport-0.3.1-1
+  cygport-0.3.7-1
   gcc-core-3.4.4-3
   make-3.81-1
-  perl-5.8.7-5
+  perl-5.8.8-4
   sed-4.1.5-2
 
 Canonical homepage:
@@ -41,18 +41,18 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack netpbm-10.39.00-1-src.tar.bz2
+  unpack netpbm-10.41.00-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./netpbm-10.39.00-1.cygport all
+  cygport ./netpbm-10.41.00-1.cygport all
 
 This will create:
-  /usr/src/libnetpbm-devel-10.39.00-1.tar.bz2
-  /usr/src/libnetpbm10-10.39.00-1.tar.bz2
-  /usr/src/netpbm-10.39.00-1-src.tar.bz2
-  /usr/src/netpbm-10.39.00-1.tar.bz2
-  /usr/src/netpbm-doc-10.39.00-1.tar.bz2
+  /usr/src/libnetpbm-devel-10.41.00-1.tar.bz2
+  /usr/src/libnetpbm10-10.41.00-1.tar.bz2
+  /usr/src/netpbm-10.41.00-1-src.tar.bz2
+  /usr/src/netpbm-10.41.00-1.tar.bz2
+  /usr/src/netpbm-doc-10.41.00-1.tar.bz2
 
 -------------------------------------------
 
@@ -92,7 +92,6 @@ Files included in the binary packages:
   /usr/bin/leaftoppm.exe
   /usr/bin/lispmtopgm.exe
   /usr/bin/macptopbm.exe
-  /usr/bin/manweb
   /usr/bin/mdatopbm.exe
   /usr/bin/mgrtopbm.exe
   /usr/bin/mrftopbm.exe
@@ -384,8 +383,7 @@ Files included in the binary packages:
   /usr/bin/yuvsplittoppm.exe
   /usr/bin/yuvtoppm.exe
   /usr/bin/zeisstopnm.exe
-  /usr/share/doc/Cygwin/netpbm-10.39.00.README
-  /usr/share/doc/netpbm-10.39.00/README
+  /usr/share/doc/netpbm-10.41.00/README
   /usr/share/netpbm/palmcolor8.map
   /usr/share/netpbm/palmgray1.map
   /usr/share/netpbm/palmgray2.map
@@ -421,6 +419,7 @@ Files included in the binary packages:
 (netpbm-doc)
   /etc/defaults/etc/manweb.conf
   /etc/postinstall/netpbm.sh
+  /usr/bin/manweb
   /usr/share/man/man1/411toppm.1.gz
   /usr/share/man/man1/anytopnm.1.gz
   /usr/share/man/man1/asciitopgm.1.gz
@@ -733,7 +732,6 @@ Files included in the binary packages:
   /usr/share/man/man5/pgm.5.gz
   /usr/share/man/man5/pnm.5.gz
   /usr/share/man/man5/ppm.5.gz
-  /usr/share/netpbm/manweb/README
   /usr/share/netpbm/manweb/change.html
   /usr/share/netpbm/manweb/doc/411toppm.html
   /usr/share/netpbm/manweb/doc/anytopnm.html
@@ -752,7 +750,6 @@ Files included in the binary packages:
   /usr/share/netpbm/manweb/doc/cmuwmtopbm.html
   /usr/share/netpbm/manweb/doc/ddbugtopbm.html
   /usr/share/netpbm/manweb/doc/directory.html
-  /usr/share/netpbm/manweb/doc/error.html
   /usr/share/netpbm/manweb/doc/escp2topbm.html
   /usr/share/netpbm/manweb/doc/extendedopacity.html
   /usr/share/netpbm/manweb/doc/eyuvtoppm.html
@@ -779,6 +776,9 @@ Files included in the binary packages:
   /usr/share/netpbm/manweb/doc/jpeg2ktopam.html
   /usr/share/netpbm/manweb/doc/jpegtopnm.html
   /usr/share/netpbm/manweb/doc/leaftoppm.html
+  /usr/share/netpbm/manweb/doc/liberror.html
+  /usr/share/netpbm/manweb/doc/libmaketmpfile.html
+  /usr/share/netpbm/manweb/doc/libmaketmpfilefd.html
   /usr/share/netpbm/manweb/doc/libnetpbm.html
   /usr/share/netpbm/manweb/doc/libnetpbm_dir.html
   /usr/share/netpbm/manweb/doc/libnetpbm_draw.html
@@ -791,6 +791,7 @@ Files included in the binary packages:
   /usr/share/netpbm/manweb/doc/libppm.html
   /usr/share/netpbm/manweb/doc/libsystem.html
   /usr/share/netpbm/manweb/doc/libtmpfile.html
+  /usr/share/netpbm/manweb/doc/libtmpfilefd.html
   /usr/share/netpbm/manweb/doc/lispmtopgm.html
   /usr/share/netpbm/manweb/doc/macptopbm.html
   /usr/share/netpbm/manweb/doc/mdatopbm.html
@@ -850,6 +851,7 @@ Files included in the binary packages:
   /usr/share/netpbm/manweb/doc/pamtohtmltbl.html
   /usr/share/netpbm/manweb/doc/pamtojpeg2k.html
   /usr/share/netpbm/manweb/doc/pamtooctaveimg.html
+  /usr/share/netpbm/manweb/doc/pamtopam.html
   /usr/share/netpbm/manweb/doc/pamtopfm.html
   /usr/share/netpbm/manweb/doc/pamtopnm.html
   /usr/share/netpbm/manweb/doc/pamtosvg.html
@@ -1094,6 +1096,7 @@ Files included in the binary packages:
   /usr/share/netpbm/manweb/doc/yuvsplittoppm.html
   /usr/share/netpbm/manweb/doc/yuvtoppm.html
   /usr/share/netpbm/manweb/doc/zeisstopnm.html
+  /usr/share/netpbm/manweb/gcc296.html
   /usr/share/netpbm/manweb/gettingsubversion.html
   /usr/share/netpbm/manweb/history.html
   /usr/share/netpbm/manweb/index.html
@@ -1104,6 +1107,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 10.41.00-1 -----
+Version bump.
 
 ----- version 10.39.00-1 -----
 Version bump.
