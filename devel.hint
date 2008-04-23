@@ -1,5 +1,5 @@
 category: Graphics Devel
-requires: cygwin
+requires: cygwin libnetpbm10
 external-source: netpbm
 sdesc: "Library for manipulation of PNM images (development)"
 ldesc: "Netpbm is a toolkit for manipulation of graphic images, including

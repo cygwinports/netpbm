@@ -11,48 +11,47 @@ a mirror image; Creating a sequence of images that fade from one image
 to another; etc.
 
 Runtime requirements:
-  cygwin-1.5.25-7
+  cygwin-1.5.25-11
   file
   ghostscript
   libX11_6-1.1.3-1
   libjbig2-1.6-1
   libjpeg62-6b-12
-  libpng12-1.2.24-1
+  libpng12-1.2.26-1
   libtiff5-3.8.2-3
-  libxml2-2.6.30-1
+  libxml2-2.6.32-1
   zlib-1.2.3-2
 
 Build requirements:
 (besides corresponding -devel packages)
-  cygwin-1.5.25-7
   binutils-20060817-1
-  cygport-0.3.7-1
+  cygport-0.3.9-1
   gcc-core-3.4.4-3
   make-3.81-1
-  perl-5.8.8-4
+  perl-5.10.0-3
   sed-4.1.5-2
 
 Canonical homepage:
   http://netpbm.sourceforge.net/
 
 Canonical download:
-  https://netpbm.svn.sourceforge.net/svnroot/netpbm/
+  https://netpbm.svn.sourceforge.net/svnroot/netpbm/advanced/
 
 -------------------------------------------
 
 Build instructions:
-  unpack netpbm-10.41.00-1-src.tar.bz2
+  unpack netpbm-10.42.2-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./netpbm-10.41.00-1.cygport all
+  cygport ./netpbm-10.42.2-1.cygport all
 
 This will create:
-  /usr/src/libnetpbm-devel-10.41.00-1.tar.bz2
-  /usr/src/libnetpbm10-10.41.00-1.tar.bz2
-  /usr/src/netpbm-10.41.00-1-src.tar.bz2
-  /usr/src/netpbm-10.41.00-1.tar.bz2
-  /usr/src/netpbm-doc-10.41.00-1.tar.bz2
+  /usr/src/libnetpbm-devel-10.42.2-1.tar.bz2
+  /usr/src/libnetpbm10-10.42.2-1.tar.bz2
+  /usr/src/netpbm-10.42.2-1-src.tar.bz2
+  /usr/src/netpbm-10.42.2-1.tar.bz2
+  /usr/src/netpbm-doc-10.42.2-1.tar.bz2
 
 -------------------------------------------
 
@@ -145,7 +144,8 @@ Files included in the binary packages:
   /usr/bin/pamtogif.exe
   /usr/bin/pamtohdiff.exe
   /usr/bin/pamtohtmltbl.exe
-  /usr/bin/pamtooctave.exe
+  /usr/bin/pamtooctaveimg.exe
+  /usr/bin/pamtopam.exe
   /usr/bin/pamtopfm.exe
   /usr/bin/pamtopnm.exe
   /usr/bin/pamtosvg.exe
@@ -383,7 +383,7 @@ Files included in the binary packages:
   /usr/bin/yuvsplittoppm.exe
   /usr/bin/yuvtoppm.exe
   /usr/bin/zeisstopnm.exe
-  /usr/share/doc/netpbm-10.41.00/README
+  /usr/share/doc/netpbm-10.42.2/README
   /usr/share/netpbm/palmcolor8.map
   /usr/share/netpbm/palmgray1.map
   /usr/share/netpbm/palmgray2.map
@@ -395,24 +395,26 @@ Files included in the binary packages:
   /usr/bin/cygnetpbm-10.dll
 
 (libnetpbm-devel)
-  /usr/include/bitio.h
-  /usr/include/colorname.h
-  /usr/include/mallocvar.h
-  /usr/include/nstring.h
-  /usr/include/pam.h
-  /usr/include/pammap.h
-  /usr/include/pbm.h
-  /usr/include/pbmfont.h
-  /usr/include/pgm.h
-  /usr/include/pm.h
-  /usr/include/pm_config.h
-  /usr/include/pm_gamma.h
-  /usr/include/pm_system.h
-  /usr/include/pnm.h
-  /usr/include/ppm.h
-  /usr/include/ppmcmap.h
-  /usr/include/ppmfloyd.h
-  /usr/include/shhopt.h
+  /usr/include/netpbm/bitio.h
+  /usr/include/netpbm/colorname.h
+  /usr/include/netpbm/mallocvar.h
+  /usr/include/netpbm/nstring.h
+  /usr/include/netpbm/pam.h
+  /usr/include/netpbm/pammap.h
+  /usr/include/netpbm/pbm.h
+  /usr/include/netpbm/pbmfont.h
+  /usr/include/netpbm/pgm.h
+  /usr/include/netpbm/pm.h
+  /usr/include/netpbm/pm_config.h
+  /usr/include/netpbm/pm_gamma.h
+  /usr/include/netpbm/pm_system.h
+  /usr/include/netpbm/pnm.h
+  /usr/include/netpbm/ppm.h
+  /usr/include/netpbm/ppmcmap.h
+  /usr/include/netpbm/ppmdfont.h
+  /usr/include/netpbm/ppmdraw.h
+  /usr/include/netpbm/ppmfloyd.h
+  /usr/include/netpbm/shhopt.h
   /usr/lib/libnetpbm.a
   /usr/lib/libnetpbm.dll.a
 
@@ -505,7 +507,8 @@ Files included in the binary packages:
   /usr/share/man/man1/pamtogif.1.gz
   /usr/share/man/man1/pamtohdiff.1.gz
   /usr/share/man/man1/pamtohtmltbl.1.gz
-  /usr/share/man/man1/pamtooctave.1.gz
+  /usr/share/man/man1/pamtooctaveimg.1.gz
+  /usr/share/man/man1/pamtopam.1.gz
   /usr/share/man/man1/pamtopfm.1.gz
   /usr/share/man/man1/pamtopnm.1.gz
   /usr/share/man/man1/pamtosvg.1.gz
@@ -1107,6 +1110,9 @@ Files included in the binary packages:
 ------------------
 
 Port Notes:
+
+----- version 10.42.2-1 -----
+Version bump.
 
 ----- version 10.41.00-1 -----
 Version bump.
