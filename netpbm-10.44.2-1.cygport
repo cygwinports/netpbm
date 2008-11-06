@@ -1,10 +1,14 @@
 SVN_URI="https://netpbm.svn.sourceforge.net/svnroot/netpbm"
 SVN_BRANCH="advanced"
-SVN_REV=613
+SVN_REV=763
 inherit svn
 
 DESCRIPTION="Toolkit for manipulation of graphic images"
 HOMEPAGE="http://netpbm.sourceforge.net/"
+
+PATCH_URI="10.44.2-build.patch
+           10.44.2-getline.patch
+		   10.44.2-posix-defs.patch"
 
 PKG_NAMES="${PN} lib${PN}${PV_MAJ} lib${PN}-devel ${PN}-doc"
 PKG_HINTS="setup lib devel doc"

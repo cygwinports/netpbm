@@ -1,0 +1,39 @@
+--- origsrc/netpbm/converter/ppm/xpmtoppm.c	2008-11-06 00:52:17.000000000 -0600
++++ src/netpbm/converter/ppm/xpmtoppm.c	2008-11-06 00:57:29.133794100 -0600
+@@ -112,6 +112,8 @@
+ }
+ 
+ 
++#define getline _getline
++
+ static char lastInputLine[MAX_LINE+1];
+     /* contents of line most recently read from input */
+ static bool backup;
+@@ -121,7 +123,7 @@
+ 
+ 
+ static void
+-getline(char * const line,
++_getline(char * const line,
+         size_t const size,
+         FILE * const stream) {
+ /*----------------------------------------------------------------------------
+--- origsrc/netpbm/converter/ppm/xvminitoppm.c	2008-11-06 00:52:17.000000000 -0600
++++ src/netpbm/converter/ppm/xvminitoppm.c	2008-11-06 00:57:29.149419100 -0600
+@@ -53,7 +53,7 @@
+ 
+ 
+ static void
+-getline(FILE * const ifP,
++pm_getline(FILE * const ifP,
+         char * const buf,
+         size_t const size) {
+ 
+@@ -69,6 +69,7 @@
+     }
+ }
+ 
++#define getline pm_getline
+ 
+ 
+ static void
