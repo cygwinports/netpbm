@@ -1,5 +1,5 @@
 category: Graphics
-requires: cygwin file ghostscript libnetpbm10 libX11_6 libjbig2 libjpeg62 libpng12 libtiff5 libxml2 zlib
+requires: file ghostscript libnetpbm10 libX11_6 libjbig2 libjpeg62 libpng12 libtiff5 libxml2 zlib
 sdesc: "Toolkit for manipulation of graphic images"
 ldesc: "Netpbm is a toolkit for manipulation of graphic images, including
 conversion of images between a variety of different formats.  There
