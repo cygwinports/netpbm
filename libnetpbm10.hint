@@ -1,7 +1,7 @@
-category: Graphics Doc
-requires: lynx man
+category: Graphics
+requires: libgcc1
 external-source: netpbm
-sdesc: "Toolkit for manipulation of graphic images (HTML and manpage docs)"
+sdesc: "Library for manipulation of PNM images (runtime library)"
 ldesc: "Netpbm is a toolkit for manipulation of graphic images, including
 conversion of images between a variety of different formats.  There
 are over 220 separate tools in the package including converters for

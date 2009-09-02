@@ -1,0 +1,57 @@
+SVN_URI="https://netpbm.svn.sourceforge.net/svnroot/netpbm"
+SVN_BRANCH="advanced"
+SVN_REV=972
+inherit svn
+
+DESCRIPTION="Toolkit for manipulation of graphic images"
+HOMEPAGE="http://netpbm.sourceforge.net/"
+
+PATCH_URI="10.47.2-build.patch"
+
+DISTCLEANFILES="config.mk"
+
+PKG_NAMES="${PN} lib${PN}${PV_MAJ} lib${PN}-devel"
+netpbm_CONTENTS="--exclude=man3 --exclude=*.dll usr/bin/ usr/share/"
+libnetpbm10_CONTENTS='usr/bin/cygnetpbm-10.dll'
+libnetpbm_devel_CONTENTS='usr/include/ usr/lib/ usr/share/man/man3/'
+
+MAKEOPTS+=" -j1"
+
+netpbm_version_check() {
+	eval $(sed -e 's/ //g' ${S}/version.mk)
+	if ((NETPBM_MAJOR_RELEASE != PVP[0])) ||
+	   ((NETPBM_MINOR_RELEASE != PVP[1])) ||
+	   ((NETPBM_POINT_RELEASE != PVP[2]))
+	then
+		error "Package version should be $NETPBM_MAJOR_RELEASE.$NETPBM_MINOR_RELEASE.$NETPBM_POINT_RELEASE"
+	fi
+}
+
+src_compile() {
+	netpbm_version_check
+
+	lndirs
+	cd ${B}
+	cygmake
+
+	mkdir -p userguide
+	cd userguide
+	wget --recursive --relative -nH --cut-dirs=1 ${HOMEPAGE}/doc/
+	cygmake -f ${B}/buildtools/manpage.mk MAKEMAN=${B}/buildtools/makeman USERGUIDE=${B}/userguide/doc manpages
+}
+
+src_test() { :; }
+
+src_install() {
+	netpbm_version_check
+
+	cd ${B}
+	cygmake init_package install.bin install.data install-dev pkgdir=${D}/usr
+	doman userguide/*.{1,3,5}
+
+	cd ${D}/usr
+	rm -f README VERSION config_template pkginfo bin/manweb
+	mv link lib
+	dodir /usr/share
+	mv misc share/netpbm
+}

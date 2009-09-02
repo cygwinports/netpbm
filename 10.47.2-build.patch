@@ -1,0 +1,80 @@
+--- origsrc/netpbm/common.mk	2009-08-31 01:55:38.000000000 -0500
++++ src/netpbm/common.mk	2009-09-02 13:39:11.281348200 -0500
+@@ -431,7 +431,7 @@ INSTALLBIN_TARGETS = $(BINARIES:%=%_inst
+ .PHONY: $(INSTALLBIN_TARGETS)
+ $(INSTALLBIN_TARGETS): $(PKGDIR)/bin
+ 	$(INSTALL) -c $(STRIPFLAG) -m $(INSTALL_PERM_BIN) \
+-	  $(@:%_installbin=%) $<
++	  $(@:%_installbin=%)$(EXE) $<
+ 
+ $(SCRIPTS:%=%_installscript): $(PKGDIR)/bin
+ 	$(INSTALL) -c -m $(INSTALL_PERM_BIN) \
+--- origsrc/netpbm/config.mk	1969-12-31 18:00:00.000000000 -0600
++++ src/netpbm/config.mk	2009-09-02 13:39:33.969194900 -0500
+@@ -0,0 +1,66 @@
++DEFAULT_TARGET = nonmerge
++BUILD_FIASCO = Y
++LD = $(CC)
++LINKERISCOMPILER=Y
++LINKER_CAN_DO_EXPLICIT_LIBRARY=Y
++INTTYPES_H = <inttypes.h>
++HAVE_INT64 = Y
++CC_FOR_BUILD = $(CC)
++LD_FOR_BUILD = $(LD)
++CFLAGS_FOR_BUILD = $(CFLAGS)
++LDFLAGS_FOR_BUILD = $(LDFLAGS)
++INSTALL = /usr/bin/install
++STRIPFLAG = 
++SYMLINK = ln -s
++MANPAGE_FORMAT = nroff
++AR = ar
++RANLIB = ranlib
++LEX = flex
++CFLAGS = -O3 -pipe -ffast-math -pedantic -fno-common
++EXE = .exe
++LDSHLIB = -shared -Wl,--enable-auto-image-base
++LDRELOC = ld -r
++NEED_RUNTIME_PATH = N
++NETPBMLIB_RUNTIME_PATH = 
++TIFFLIB = /usr/lib/libtiff.dll.a
++TIFFLIB_NEEDS_JPEG = Y
++TIFFLIB_NEEDS_Z = Y
++TIFFHDR_DIR = /usr/include
++JPEGLIB = /usr/lib/libjpeg.dll.a
++JPEGHDR_DIR = /usr/include
++PNGLIB = /usr/lib/libpng12.dll.a
++PNGVER = 12
++PNGHDR_DIR = /usr/include
++ZLIB = /usr/lib/libz.dll.a
++ZHDR_DIR = /usr/include
++JBIGLIB = /usr/lib/libjbig.dll.a
++JBIGHDR_DIR = /usr/include
++JASPERLIB = /usr/lib/libjasper.dll.a
++JASPERHDR_DIR = /usr/include
++URTLIB = $(BUILDDIR)/urt/librle.a
++URTHDR_DIR = $(SRCDIR)/urt
++X11LIB = /usr/lib/libX11.dll.a
++LINUXSVGALIB = NONE
++OMIT_NETWORK =
++NETWORKLD = 
++VMS = 
++DONT_HAVE_PROCESS_MGMT = N
++PKGDIR_DEFAULT = /tmp/netpbm
++PKGMANDIR = man
++INSTALL_PERM_BIN =  755       # u=rwx,go=rx
++INSTALL_PERM_LIBD = 755       # u=rwx,go=rx
++INSTALL_PERM_LIBS = 644       # u=rw,go=r
++INSTALL_PERM_HDR =  644       # u=rw,go=r
++INSTALL_PERM_MAN =  644       # u=rw,go=r
++INSTALL_PERM_DATA = 644       # u=rw,go=r
++SUFFIXMANUALS1 = 1
++SUFFIXMANUALS3 = 3
++SUFFIXMANUALS5 = 5
++NETPBMLIBTYPE = dll
++NETPBMLIBSUFFIX = dll
++STATICLIB_TOO = y
++STATICLIBSUFFIX = a
++SHLIBPREFIXLIST = cyg lib
++NETPBMSHLIBPREFIX = $(firstword $(SHLIBPREFIXLIST))
++DLLVER = -$(NETPBM_MAJOR_RELEASE)
++NETPBM_DOCURL = http://netpbm.sourceforge.net/doc/
