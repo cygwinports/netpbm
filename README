@@ -11,28 +11,28 @@ a mirror image; Creating a sequence of images that fade from one image
 to another; etc.
 
 Runtime requirements:
-  cygwin-1.7.0-60
+  cygwin-1.7.1-1
+  libgcc1-4.3.4-3
+  libjasper1-1.900.1-1
+  libjbig2-2.0-11
+  libjpeg7-7-10
+  libpng12-1.2.35-10
+  libtiff5-3.9.2-1
+  libX11_6-1.3.3-1
+  libxml2-2.7.6-1
+  zlib0-1.2.3-10
   bash
   file
   ghostscript
-  libgcc1-4.3.2-2
-  libjasper1-1.900.1-1
-  libjbig2-2.0-10
-  libjpeg62-6b-21
-  libpng12-1.2.35-10
-  libtiff5-3.8.2-10
-  libX11_6-1.2.2-1
-  libxml2-2.7.3-11
   perl
-  zlib0-1.2.3-10
 
 Build requirements:
 (besides corresponding -devel packages)
   binutils-2.19.51-1
-  cygport-0.9.9-1
-  gcc4-core-4.3.2-2
+  cygport-0.9.80-1
+  gcc4-core-4.3.4-3
   make-3.81-2
-  perl-5.10.0-5
+  perl-5.10.1-2
   sed-4.1.5-2
 
 Canonical homepage:
@@ -44,17 +44,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack netpbm-10.47.2-1-src.tar.bz2
+  unpack netpbm-10.49.2-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./netpbm-10.47.2-1.cygport all
+  cygport ./netpbm-10.49.2-1.cygport all
 
 This will create:
-  /usr/src/libnetpbm-devel-10.47.2-1.tar.bz2
-  /usr/src/libnetpbm10-10.47.2-1.tar.bz2
-  /usr/src/netpbm-10.47.2-1-src.tar.bz2
-  /usr/src/netpbm-10.47.2-1.tar.bz2
+  /usr/src/libnetpbm-devel-10.49.2-1.tar.bz2
+  /usr/src/libnetpbm10-10.49.2-1.tar.bz2
+  /usr/src/netpbm-10.49.2-1-src.tar.bz2
+  /usr/src/netpbm-10.49.2-1.tar.bz2
 
 To find out the files included in the binary packages, you can use
 "cygcheck -l <PKG>", or browse the listing for the appropriate version
@@ -64,6 +64,9 @@ at <http://cygwin.com/packages/>.
 
 
 Port Notes:
+
+----- version 10.49.2-1 -----
+Version bump.
 
 ----- version 10.47.2-1 -----
 Initial release for Cygwin 1.7.
