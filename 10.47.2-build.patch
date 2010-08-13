@@ -42,8 +42,8 @@
 +TIFFHDR_DIR = /usr/include
 +JPEGLIB = /usr/lib/libjpeg.dll.a
 +JPEGHDR_DIR = /usr/include
-+PNGLIB = /usr/lib/libpng12.dll.a
-+PNGVER = 12
++PNGLIB = /usr/lib/libpng14.dll.a
++PNGVER = 14
 +PNGHDR_DIR = /usr/include
 +ZLIB = /usr/lib/libz.dll.a
 +ZHDR_DIR = /usr/include

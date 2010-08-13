@@ -1,5 +1,5 @@
 category: Graphics
-requires: bash file ghostscript libnetpbm10 libjasper1 libjbig2 libjpeg7 libpng12 libtiff5 libX11_6 libxml2 perl zlib0
+requires: bash file ghostscript libnetpbm10 libjasper1 libjbig2 libjpeg8 libpng14 libtiff5 libX11_6 libxml2 perl zlib0
 sdesc: "Toolkit for manipulation of graphic images"
 ldesc: "Netpbm is a toolkit for manipulation of graphic images, including
 conversion of images between a variety of different formats.  There

@@ -1,13 +1,12 @@
 SVN_URI="https://netpbm.svn.sourceforge.net/svnroot/netpbm"
 SVN_BRANCH="advanced"
-SVN_REV=1105
+SVN_REV=1276
 inherit svn
 
 DESCRIPTION="Toolkit for manipulation of graphic images"
 HOMEPAGE="http://netpbm.sourceforge.net/"
 
-PATCH_URI="10.47.2-build.patch
-           10.49.2-SIGPWR.patch"
+PATCH_URI="10.47.2-build.patch"
 
 DISTCLEANFILES="config.mk"
 
@@ -37,8 +36,10 @@ src_compile() {
 
 	mkdir -p userguide
 	cd userguide
-	wget --recursive --relative -nH --cut-dirs=1 ${HOMEPAGE}/doc/
-	cygmake -f ${B}/buildtools/manpage.mk MAKEMAN=${B}/buildtools/makeman USERGUIDE=${B}/userguide/doc manpages
+	wget --recursive --relative -nH --cut-dirs=1 ${HOMEPAGE}/doc/ || true
+	find doc/ -empty -delete || true
+	cygmake -f ${B}/buildtools/manpage.mk manpages \
+		MAKEMAN=${B}/buildtools/makeman USERGUIDE=${B}/userguide/doc
 }
 
 src_test() { :; }

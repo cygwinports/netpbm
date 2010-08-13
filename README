@@ -15,11 +15,11 @@ Runtime requirements:
   libgcc1-4.3.4-3
   libjasper1-1.900.1-1
   libjbig2-2.0-11
-  libjpeg7-7-10
-  libpng12-1.2.35-10
+  libjpeg8-8b-1
+  libpng14-1.4.3-1
   libtiff5-3.9.2-1
   libX11_6-1.3.3-1
-  libxml2-2.7.6-1
+  libxml2-2.7.7-1
   zlib0-1.2.3-10
   bash
   file
@@ -28,12 +28,12 @@ Runtime requirements:
 
 Build requirements:
 (besides corresponding -devel packages)
-  binutils-2.19.51-1
-  cygport-0.9.80-1
+  binutils-2.20.51-2
+  cygport-0.9.89-1
   gcc4-core-4.3.4-3
   make-3.81-2
   perl-5.10.1-2
-  sed-4.1.5-2
+  sed-4.2.1-1
 
 Canonical homepage:
   http://netpbm.sourceforge.net/
@@ -44,17 +44,17 @@ Canonical download:
 -------------------------------------------
 
 Build instructions:
-  unpack netpbm-10.49.2-1-src.tar.bz2
+  unpack netpbm-10.51.2-1-src.tar.bz2
     if you use setup to install this src package, it will be
 	 unpacked under /usr/src automatically
   cd /usr/src
-  cygport ./netpbm-10.49.2-1.cygport all
+  cygport ./netpbm-10.51.2-1.cygport all
 
 This will create:
-  /usr/src/libnetpbm-devel-10.49.2-1.tar.bz2
-  /usr/src/libnetpbm10-10.49.2-1.tar.bz2
-  /usr/src/netpbm-10.49.2-1-src.tar.bz2
-  /usr/src/netpbm-10.49.2-1.tar.bz2
+  /usr/src/libnetpbm-devel-10.51.2-1.tar.bz2
+  /usr/src/libnetpbm10-10.51.2-1.tar.bz2
+  /usr/src/netpbm-10.51.2-1-src.tar.bz2
+  /usr/src/netpbm-10.51.2-1.tar.bz2
 
 To find out the files included in the binary packages, you can use
 "cygcheck -l <PKG>", or browse the listing for the appropriate version
@@ -64,6 +64,9 @@ at <http://cygwin.com/packages/>.
 
 
 Port Notes:
+
+----- version 10.51.2-1 -----
+Version bump.
 
 ----- version 10.49.2-1 -----
 Version bump.
