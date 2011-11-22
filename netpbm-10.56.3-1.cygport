@@ -1,6 +1,6 @@
 SVN_URI="https://netpbm.svn.sourceforge.net/svnroot/netpbm"
 SVN_BRANCH="advanced"
-SVN_REV=1481
+SVN_REV=1594
 inherit svn
 
 DESCRIPTION="Toolkit for manipulation of graphic images"
