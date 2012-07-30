@@ -1,21 +1,24 @@
-#SVN_URI="https://netpbm.svn.sourceforge.net/svnroot/netpbm"
-#SVN_BRANCH="advanced"
-#SVN_REV=1629
-#inherit svn
-
-DESCRIPTION="Toolkit for manipulation of graphic images"
+CATEGORY="Graphics"
+SUMMARY="Toolkit for manipulation of graphic images"
+DESCRIPTION="Netpbm is a toolkit for manipulation of graphic images, including
+conversion of images between a variety of different formats.  There
+are over 220 separate tools in the package including converters for
+about 100 graphics formats."
 HOMEPAGE="http://netpbm.sourceforge.net/"
 SRC_URI="http://netpbm.svn.sourceforge.net/viewvc/netpbm/advanced.tar.gz?view=tar
          http://netpbm.svn.sourceforge.net/viewvc/netpbm/userguide.tar.gz?view=tar"
 SRC_DIR="advanced"
 
-PATCH_URI="10.47.2-build.patch"
+PATCH_URI="10.47.2-build.patch
+           10.59.02-no-undefined.patch"
 
 DISTCLEANFILES="config.mk"
 
 PKG_NAMES="${PN} lib${PN}${PV_MAJ} lib${PN}-devel"
 netpbm_CONTENTS="--exclude=man3 --exclude=*.dll usr/bin/ usr/share/"
+libnetpbm10_SUMMARY="PNM image library (runtime)"
 libnetpbm10_CONTENTS='usr/bin/cygnetpbm-10.dll'
+libnetpbm_devel_SUMMARY="PNM image library (development)"
 libnetpbm_devel_CONTENTS='usr/include/ usr/lib/ usr/share/man/man3/'
 
 MAKEOPTS+=" -j1"
@@ -35,7 +38,7 @@ src_compile() {
 
 	lndirs
 	cd ${B}
-	cygmake
+	cygmake CFLAGS="${CFLAGS}"
 
 	mkdir -p userguide
 	cd userguide

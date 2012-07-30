@@ -78,3 +78,11 @@
 +NETPBMSHLIBPREFIX = $(firstword $(SHLIBPREFIXLIST))
 +DLLVER = -$(NETPBM_MAJOR_RELEASE)
 +NETPBM_DOCURL = http://netpbm.sourceforge.net/doc/
+--- origsrc/advanced/editor/Makefile	2012-03-10 14:14:15.000000000 -0600
++++ src/advanced/editor/Makefile	2012-07-30 13:40:55.285099100 -0500
+@@ -93,4 +93,4 @@ install.bin.local: $(PKGDIR)/bin
+ # In March 2012, pnmquantall replaced ppmquantall
+ 	cd $(PKGDIR)/bin ; \
+ 	rm -f ppmquantall ; \
+-	$(SYMLINK) pnmquantall$(EXE) ppmquantall
++	$(SYMLINK) pnmquantall ppmquantall
