@@ -1,3 +1,6 @@
+NAME="netpbm"
+VERSION=10.60.02
+RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="Toolkit for manipulation of graphic images"
 DESCRIPTION="Netpbm is a toolkit for manipulation of graphic images, including
