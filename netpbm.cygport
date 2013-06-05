@@ -1,5 +1,5 @@
 NAME="netpbm"
-VERSION=10.60.02
+VERSION=10.61.02
 RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="Toolkit for manipulation of graphic images"
@@ -17,7 +17,7 @@ PATCH_URI="10.47.2-build.patch
 
 DISTCLEANFILES="config.mk"
 
-PKG_NAMES="${PN} lib${PN}${PV_MAJ} lib${PN}-devel"
+PKG_NAMES="${NAME} lib${NAME}10 lib${NAME}-devel"
 netpbm_CONTENTS="--exclude=man3 --exclude=*.dll usr/bin/ usr/share/"
 libnetpbm10_SUMMARY="PNM image library (runtime)"
 libnetpbm10_CONTENTS='usr/bin/cygnetpbm-10.dll'
@@ -27,10 +27,11 @@ libnetpbm_devel_CONTENTS='usr/include/ usr/lib/ usr/share/man/man3/'
 MAKEOPTS+=" -j1"
 
 netpbm_version_check() {
+	local ver_a=(${VERSION//\./ })
 	eval $(sed -e 's/ //g' ${S}/version.mk)
-	if ((NETPBM_MAJOR_RELEASE != PVP[0])) ||
-	   ((NETPBM_MINOR_RELEASE != PVP[1])) ||
-	   ((NETPBM_POINT_RELEASE != PVP[2]))
+	if ((NETPBM_MAJOR_RELEASE != ver_a[0])) ||
+	   ((NETPBM_MINOR_RELEASE != ver_a[1])) ||
+	   ((NETPBM_POINT_RELEASE != ver_a[2]))
 	then
 		error "Package version should be $NETPBM_MAJOR_RELEASE.$NETPBM_MINOR_RELEASE.$NETPBM_POINT_RELEASE"
 	fi
@@ -41,7 +42,8 @@ src_compile() {
 
 	lndirs
 	cd ${B}
-	cygmake CFLAGS="${CFLAGS}"
+	# cannot include <io.h> because several private headers are so named
+	cygmake CFLAGS="${CFLAGS} -Dsetmode=_setmode"
 
 	mkdir -p userguide
 	cd userguide
