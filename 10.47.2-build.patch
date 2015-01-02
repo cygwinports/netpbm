@@ -43,7 +43,7 @@
 +JPEGLIB = /usr/lib/libjpeg.dll.a
 +JPEGHDR_DIR = /usr/include
 +PNGLIB = /usr/lib/libpng.dll.a
-+PNGVER = 15
++PNGVER = 16
 +PNGHDR_DIR = /usr/include
 +ZLIB = /usr/lib/libz.dll.a
 +ZHDR_DIR = /usr/include

@@ -1,0 +1,11 @@
+--- origsrc/netpbm-10.66.02/converter/other/pstopnm.c	2015-01-01 23:45:41.081826900 -0600
++++ src/netpbm-10.66.02/converter/other/pstopnm.c	2015-01-02 00:40:07.000045800 -0600
+@@ -27,6 +27,8 @@
+ #include <sys/wait.h>  
+ #include <sys/stat.h>
+ 
++#undef stdout
++
+ #include "pm_c_util.h"
+ #include "mallocvar.h"
+ #include "pnm.h"
