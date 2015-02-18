@@ -1,6 +1,6 @@
 NAME="netpbm"
 VERSION=10.66.02
-RELEASE=2
+RELEASE=3
 CATEGORY="Graphics"
 SUMMARY="Toolkit for manipulation of graphic images"
 DESCRIPTION="Netpbm is a toolkit for manipulation of graphic images, including
@@ -33,6 +33,7 @@ PATCH_URI="
 	fedora/netpbm-pnmtopclxl.patch
 	fedora/netpbm-werror.patch
 	fedora/netpbm-disable-pbmtog3.patch
+	fedora/netpbm-pnmtops.patch
 	10.47.2-build.patch
 	10.59.02-no-undefined.patch
 	10.66.02-cygwin-stdout.patch
@@ -41,6 +42,7 @@ PATCH_URI="
 DISTCLEANFILES="config.mk"
 
 PKG_NAMES="${NAME} lib${NAME}10 lib${NAME}-devel"
+netpbm_REQUIRES="ghostscript"
 netpbm_CONTENTS="--exclude=man3 --exclude=*.dll usr/bin/ usr/share/"
 libnetpbm10_SUMMARY="PNM image library (runtime)"
 libnetpbm10_CONTENTS='usr/bin/cygnetpbm-10.dll'
