@@ -1,6 +1,6 @@
 NAME="netpbm"
-VERSION=10.66.02
-RELEASE=3
+VERSION=10.71.02
+RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="Toolkit for manipulation of graphic images"
 DESCRIPTION="Netpbm is a toolkit for manipulation of graphic images, including
@@ -8,7 +8,7 @@ conversion of images between a variety of different formats.  There
 are over 220 separate tools in the package including converters for
 about 100 graphics formats."
 HOMEPAGE="http://netpbm.sourceforge.net/"
-md5sum=dcb7de91384d630eb399e48c71158f3d
+md5sum=24df6a5baf36fa8943f046568726fd57
 SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/netpbm/netpbm-${VERSION}.tar.xz/${md5sum}/netpbm-${VERSION}.tar.xz"
 PATCH_URI="
 	fedora/netpbm-time.patch
@@ -30,7 +30,6 @@ PATCH_URI="
 	fedora/netpbm-pamtojpeg2k.patch
 	fedora/netpbm-manfix.patch
 	fedora/netpbm-ppmtopict.patch
-	fedora/netpbm-pnmtopclxl.patch
 	fedora/netpbm-werror.patch
 	fedora/netpbm-disable-pbmtog3.patch
 	fedora/netpbm-pnmtops.patch
