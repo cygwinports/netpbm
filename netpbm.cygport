@@ -1,5 +1,5 @@
 NAME="netpbm"
-VERSION=10.74.05
+VERSION=10.76.00
 RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="Toolkit for manipulation of graphic images"
@@ -12,30 +12,13 @@ HOMEPAGE="http://netpbm.sourceforge.net/"
 #SRC_URI="http://pkgs.fedoraproject.org/repo/pkgs/netpbm/netpbm-${VERSION}.tar.xz/${md5sum}/netpbm-${VERSION}.tar.xz"
 SRC_URI="netpbm-${VERSION}.tar.xz"
 PATCH_URI="
-	fedora/netpbm-time.patch
-	fedora/netpbm-message.patch
 	fedora/netpbm-security-scripts.patch
 	fedora/netpbm-security-code.patch
-	fedora/netpbm-nodoc.patch
-	fedora/netpbm-gcc4.patch
-	fedora/netpbm-bmptopnm.patch
-	fedora/netpbm-CAN-2005-2471.patch
-	fedora/netpbm-xwdfix.patch
-	fedora/netpbm-multilib.patch
-	fedora/netpbm-glibc.patch
-	fedora/netpbm-docfix.patch
 	fedora/netpbm-ppmfadeusage.patch
-	fedora/netpbm-fiasco-overflow.patch
 	fedora/netpbm-noppmtompeg.patch
-	fedora/netpbm-cmuwtopbm.patch
-	fedora/netpbm-pamtojpeg2k.patch
-	fedora/netpbm-manfix.patch
-	fedora/netpbm-ppmtopict.patch
-	fedora/netpbm-werror.patch
-	fedora/netpbm-disable-pbmtog3.patch
-	fedora/netpbm-pnmtops.patch
 	10.47.2-build.patch
 	10.66.02-cygwin-stdout.patch
+	10.76.00-symlinks.patch
 "
 
 DISTCLEANFILES="config.mk"
@@ -77,7 +60,14 @@ src_compile() {
 		MAKEMAN=${B}/buildtools/makeman USERGUIDE=${S}/userguide
 }
 
-src_test() { :; }
+src_test() {
+	# NOTE: requires install to be run first
+	cd ${B}/test
+	PATH=${D}/usr/bin:$PATH \
+	CHECK_TYPE=install \
+	RGBDEF=/usr/share/X11/rgb.txt \
+	./Execute-Tests
+}
 
 src_install() {
 #	netpbm_version_check

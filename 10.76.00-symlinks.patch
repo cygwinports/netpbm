@@ -1,0 +1,26 @@
+These symlink targets are scripts, not EXEs, so the links end up broken
+
+--- origsrc/netpbm-10.76.00/converter/other/Makefile	2016-11-10 00:35:21.000000000 -0600
++++ src/netpbm-10.76.00/converter/other/Makefile	2016-11-10 01:44:54.122488000 -0600
+@@ -254,7 +254,7 @@ install.bin.local: $(PKGDIR)/bin
+ # Remember that $(SYMLINK) might just be a copy command.
+ # backward compatibility: program used to be named pnmnoraw
+ 	cd $(PKGDIR)/bin ; \
+-	$(SYMLINK) pnmtoplainpnm$(EXE) pnmnoraw$(EXE)
++	$(SYMLINK) pnmtoplainpnm pnmnoraw
+ # backward compatibility: program used to be gemtopbm
+ 	cd $(PKGDIR)/bin ; \
+ 	$(SYMLINK) gemtopnm$(EXE) gemtopbm$(EXE)
+--- origsrc/netpbm-10.76.00/editor/Makefile	2016-11-10 00:35:16.000000000 -0600
++++ src/netpbm-10.76.00/editor/Makefile	2016-11-10 01:44:18.337844100 -0600
+@@ -92,8 +92,8 @@ install.bin.local: $(PKGDIR)/bin
+ 	$(SYMLINK) pamscale$(EXE) pnmscale$(EXE)
+ # In March 2012, pnmquantall replaced ppmquantall
+ 	cd $(PKGDIR)/bin ; \
+-	rm -f ppmquantall$(EXE) ; \
+-	$(SYMLINK) pnmquantall$(EXE) ppmquantall$(EXE)
++	rm -f ppmquantall ; \
++	$(SYMLINK) pnmquantall ppmquantall
+ # In August 2014, pamcomp replaced pnmcomp
+ 	cd $(PKGDIR)/bin ; \
+ 	rm -f pnmcomp$(EXE) ; \
