@@ -1,5 +1,5 @@
 NAME="netpbm"
-VERSION=10.77.00
+VERSION=10.78.00
 RELEASE=1
 CATEGORY="Graphics"
 SUMMARY="Toolkit for manipulation of graphic images"
@@ -18,7 +18,6 @@ PATCH_URI="
 	fedora/netpbm-noppmtompeg.patch
 	fedora/netpbm-CVE-2017-2586.patch
 	fedora/netpbm-CVE-2017-2587.patch
-	fedora/netpbm-CVE-2017-5849.patch
 	10.47.2-build.patch
 	10.66.02-cygwin-stdout.patch
 	10.76.00-symlinks.patch
